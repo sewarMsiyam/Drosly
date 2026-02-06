@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Drosly</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 
 </head>
@@ -748,8 +749,8 @@
     </header>
 
     <main class="space-y-8 mb-16">
-        <section class="container mt-6">
-            <div class="flex items-center gap-5 mb-5">
+        <section class="container mt-6" data-aos="fade-up">
+            <div class="flex flex-wrap items-center gap-5 mb-5">
                 <button data-drawer-target="drawer-filters" data-drawer-show="drawer-filters"
                     data-drawer-placement="left" aria-controls="drawer-filters" type="button"
                     class="border border-gray-200 hover:bg-gray-50 font-medium rounded-full text-sm px-4 py-2.5 inline-flex items-center">
@@ -921,7 +922,6 @@
                                     <span class="text-xs text-gray-500 font-medium">56</span>
                                 </div>
                             </li>
-
                             <li>
                                 <div class="flex items-center justify-between gap-10 p-2 rounded hover:bg-primary-50">
                                     <div class="flex items-center">
@@ -963,7 +963,6 @@
                                     <span class="text-xs text-gray-500 font-medium">42</span>
                                 </div>
                             </li>
-
                             <li>
                                 <div class="flex items-center justify-between gap-10 p-2 rounded hover:bg-primary-50">
                                     <div class="flex items-center">
@@ -1005,7 +1004,6 @@
                                     <span class="text-xs text-gray-500 font-medium">28</span>
                                 </div>
                             </li>
-
                             <li>
                                 <div class="flex items-center justify-between gap-10 p-2 rounded hover:bg-primary-50">
                                     <div class="flex items-center">
@@ -1047,7 +1045,6 @@
                                     <span class="text-xs text-gray-500 font-medium">19</span>
                                 </div>
                             </li>
-
                             <li>
                                 <div class="flex items-center justify-between gap-10 p-2 rounded hover:bg-primary-50">
                                     <div class="flex items-center">
@@ -1251,7 +1248,7 @@
 
         <section class="container mt-6">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div
+                <div data-aos="zoom-in"
                     class="group relative border-2 border-primary-100 hover:border-primary-500 rounded-xl transition-all duration-300 flex flex-col ">
                     <div class="relative p-2 pb-0">
                         <img src="images/courses1.png" alt="Course" class="rounded-xl w-full h-[160px] object-cover">
@@ -1349,7 +1346,7 @@
                     </div>
                 </div>
 
-                <div
+                <div data-aos="zoom-in"
                     class="group relative border-2 border-primary-100 hover:border-primary-500 rounded-xl transition-all duration-300 flex flex-col ">
                     <div class="relative p-2 pb-0">
                         <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=400" alt="Course"
@@ -1448,7 +1445,7 @@
                     </div>
                 </div>
 
-                <div
+                <div data-aos="zoom-in"
                     class="group relative border-2 border-primary-100 hover:border-primary-500 rounded-xl transition-all duration-300 flex flex-col ">
                     <div class="relative p-2 pb-0">
                         <img src="images/courses1.png" alt="Course" class="rounded-xl w-full h-[160px] object-cover">
@@ -1546,7 +1543,7 @@
                     </div>
                 </div>
 
-                <div
+                <div data-aos="zoom-in"
                     class="group relative border-2 border-primary-100 hover:border-primary-500 rounded-xl transition-all duration-300 flex flex-col ">
                     <div class="relative p-2 pb-0">
                         <img src="images/courses1.png" alt="Course" class="rounded-xl w-full h-[160px] object-cover">
@@ -1686,13 +1683,7 @@
                 </button>
             </div>
         </section>
-
-
-
-
     </main>
-
-
 
     <div id="drawer-filters"
         class="fixed top-0 left-0 z-40 h-screen p-4 ps-7 overflow-y-auto overflow-x-visible transition-transform -translate-x-full bg-white w-80 mt-0"
@@ -1713,7 +1704,7 @@
         </div>
 
         <!-- Drawer Content -->
-        <div>
+        <div class="space-y-4">
 
             <!-- Select All & Reset -->
             <div class="flex items-center gap-1 mb-5 text-sm">
@@ -1730,360 +1721,371 @@
             </div>
 
             <!-- Current Selection -->
-            <div class="mb-6">
+            <div>
                 <h4 class="text-sm font-semibold text-gray-900 mb-3">Current Selection</h4>
                 <div class="flex flex-wrap gap-2">
                     <span
-                        class="inline-flex items-center px-3 py-1.5 rounded-full text-sm font-medium bg-emerald-50 text-emerald-700 border border-emerald-200">
-                        <svg class="w-4 h-4 me-1.5" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd"
-                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                clip-rule="evenodd" />
-                        </svg>
+                        class="inline-flex items-center px-4 py-1.5 rounded-full text-sm font-medium bg-primary-300 text-primary-800 border border-primary-800">
+                        <span class="bg-primary-800 me-2 rounded-full p-1">
+                            <svg width="10" height="10" viewBox="0 0 14 14" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M7.00042 8.23784L10.0938 11.3313C10.258 11.4954 10.4806 11.5876 10.7128 11.5876C10.9449 11.5876 11.1675 11.4954 11.3317 11.3313C11.4958 11.1671 11.588 10.9445 11.588 10.7123C11.588 10.4802 11.4958 10.2576 11.3317 10.0934L8.23709 7L11.3311 3.90659C11.4123 3.82531 11.4768 3.72883 11.5207 3.62265C11.5647 3.51647 11.5873 3.40267 11.5872 3.28776C11.5872 3.17284 11.5646 3.05905 11.5206 2.95289C11.4766 2.84674 11.4121 2.75028 11.3308 2.66904C11.2495 2.58781 11.153 2.52337 11.0469 2.47942C10.9407 2.43547 10.8269 2.41286 10.712 2.41289C10.597 2.41291 10.4833 2.43558 10.3771 2.47958C10.2709 2.52358 10.1745 2.58806 10.0933 2.66934L7.00042 5.76275L3.907 2.66934C3.82633 2.58573 3.72981 2.51902 3.62307 2.47312C3.51634 2.42721 3.40154 2.40302 3.28536 2.40195C3.16918 2.40089 3.05395 2.42297 2.94639 2.46692C2.83884 2.51086 2.74111 2.57579 2.65892 2.65791C2.57672 2.74002 2.51171 2.83769 2.46766 2.9452C2.42361 3.05271 2.40142 3.16792 2.40237 3.2841C2.40333 3.40029 2.42741 3.51511 2.47322 3.62189C2.51902 3.72866 2.58564 3.82525 2.66917 3.906L5.76375 7L2.66975 10.094C2.58622 10.1748 2.51961 10.2713 2.4738 10.3781C2.42799 10.4849 2.40391 10.5997 2.40296 10.7159C2.402 10.8321 2.4242 10.9473 2.46824 11.0548C2.51229 11.1623 2.57731 11.26 2.6595 11.3421C2.74169 11.4242 2.83942 11.4891 2.94697 11.5331C3.05453 11.577 3.16976 11.5991 3.28594 11.5981C3.40212 11.597 3.51693 11.5728 3.62366 11.5269C3.73039 11.481 3.82691 11.4143 3.90759 11.3307L7.00042 8.23784Z"
+                                    fill="white" />
+                            </svg>
+                        </span>
                         English
                     </span>
                     <span
-                        class="inline-flex items-center px-3 py-1.5 rounded-full text-sm font-medium bg-emerald-50 text-emerald-700 border border-emerald-200">
-                        <svg class="w-4 h-4 me-1.5" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd"
-                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                clip-rule="evenodd" />
-                        </svg>
+                        class="inline-flex items-center px-4 py-1.5 rounded-full text-sm font-medium bg-primary-300 text-primary-800 border border-primary-800">
+                        <span class="bg-primary-800 me-2 rounded-full p-1">
+                            <svg width="10" height="10" viewBox="0 0 14 14" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M7.00042 8.23784L10.0938 11.3313C10.258 11.4954 10.4806 11.5876 10.7128 11.5876C10.9449 11.5876 11.1675 11.4954 11.3317 11.3313C11.4958 11.1671 11.588 10.9445 11.588 10.7123C11.588 10.4802 11.4958 10.2576 11.3317 10.0934L8.23709 7L11.3311 3.90659C11.4123 3.82531 11.4768 3.72883 11.5207 3.62265C11.5647 3.51647 11.5873 3.40267 11.5872 3.28776C11.5872 3.17284 11.5646 3.05905 11.5206 2.95289C11.4766 2.84674 11.4121 2.75028 11.3308 2.66904C11.2495 2.58781 11.153 2.52337 11.0469 2.47942C10.9407 2.43547 10.8269 2.41286 10.712 2.41289C10.597 2.41291 10.4833 2.43558 10.3771 2.47958C10.2709 2.52358 10.1745 2.58806 10.0933 2.66934L7.00042 5.76275L3.907 2.66934C3.82633 2.58573 3.72981 2.51902 3.62307 2.47312C3.51634 2.42721 3.40154 2.40302 3.28536 2.40195C3.16918 2.40089 3.05395 2.42297 2.94639 2.46692C2.83884 2.51086 2.74111 2.57579 2.65892 2.65791C2.57672 2.74002 2.51171 2.83769 2.46766 2.9452C2.42361 3.05271 2.40142 3.16792 2.40237 3.2841C2.40333 3.40029 2.42741 3.51511 2.47322 3.62189C2.51902 3.72866 2.58564 3.82525 2.66917 3.906L5.76375 7L2.66975 10.094C2.58622 10.1748 2.51961 10.2713 2.4738 10.3781C2.42799 10.4849 2.40391 10.5997 2.40296 10.7159C2.402 10.8321 2.4242 10.9473 2.46824 11.0548C2.51229 11.1623 2.57731 11.26 2.6595 11.3421C2.74169 11.4242 2.83942 11.4891 2.94697 11.5331C3.05453 11.577 3.16976 11.5991 3.28594 11.5981C3.40212 11.597 3.51693 11.5728 3.62366 11.5269C3.73039 11.481 3.82691 11.4143 3.90759 11.3307L7.00042 8.23784Z"
+                                    fill="white" />
+                            </svg>
+                        </span>
                         Beginner
                     </span>
                     <span
-                        class="inline-flex items-center px-3 py-1.5 rounded-full text-sm font-medium bg-emerald-50 text-emerald-700 border border-emerald-200">
-                        <svg class="w-4 h-4 me-1.5" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd"
-                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                clip-rule="evenodd" />
-                        </svg>
+                        class="inline-flex items-center px-4 py-1.5 rounded-full text-sm font-medium bg-primary-300 text-primary-800 border border-primary-800">
+                        <span class="bg-primary-800 me-2 rounded-full p-1">
+                            <svg width="10" height="10" viewBox="0 0 14 14" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M7.00042 8.23784L10.0938 11.3313C10.258 11.4954 10.4806 11.5876 10.7128 11.5876C10.9449 11.5876 11.1675 11.4954 11.3317 11.3313C11.4958 11.1671 11.588 10.9445 11.588 10.7123C11.588 10.4802 11.4958 10.2576 11.3317 10.0934L8.23709 7L11.3311 3.90659C11.4123 3.82531 11.4768 3.72883 11.5207 3.62265C11.5647 3.51647 11.5873 3.40267 11.5872 3.28776C11.5872 3.17284 11.5646 3.05905 11.5206 2.95289C11.4766 2.84674 11.4121 2.75028 11.3308 2.66904C11.2495 2.58781 11.153 2.52337 11.0469 2.47942C10.9407 2.43547 10.8269 2.41286 10.712 2.41289C10.597 2.41291 10.4833 2.43558 10.3771 2.47958C10.2709 2.52358 10.1745 2.58806 10.0933 2.66934L7.00042 5.76275L3.907 2.66934C3.82633 2.58573 3.72981 2.51902 3.62307 2.47312C3.51634 2.42721 3.40154 2.40302 3.28536 2.40195C3.16918 2.40089 3.05395 2.42297 2.94639 2.46692C2.83884 2.51086 2.74111 2.57579 2.65892 2.65791C2.57672 2.74002 2.51171 2.83769 2.46766 2.9452C2.42361 3.05271 2.40142 3.16792 2.40237 3.2841C2.40333 3.40029 2.42741 3.51511 2.47322 3.62189C2.51902 3.72866 2.58564 3.82525 2.66917 3.906L5.76375 7L2.66975 10.094C2.58622 10.1748 2.51961 10.2713 2.4738 10.3781C2.42799 10.4849 2.40391 10.5997 2.40296 10.7159C2.402 10.8321 2.4242 10.9473 2.46824 11.0548C2.51229 11.1623 2.57731 11.26 2.6595 11.3421C2.74169 11.4242 2.83942 11.4891 2.94697 11.5331C3.05453 11.577 3.16976 11.5991 3.28594 11.5981C3.40212 11.597 3.51693 11.5728 3.62366 11.5269C3.73039 11.481 3.82691 11.4143 3.90759 11.3307L7.00042 8.23784Z"
+                                    fill="white" />
+                            </svg>
+                        </span>
                         Expert
                     </span>
                 </div>
-                <button class="text-red-600 hover:text-red-700 text-sm font-medium mt-3">Clear All</button>
+                <button class="text-red-600 hover:text-red-700 underline text-sm font-medium mt-3">Clear All</button>
             </div>
 
-            <!-- Ratings Accordion -->
-            <div id="accordion-ratings" class="mb-6">
-                <h2 id="accordion-ratings-heading">
+
+            <div id="accordion-flush" data-accordion="collapse" data-active-classes="text-heading"
+                data-inactive-classes="text-body">
+                <h2 id="accordion-flush-heading-1" class="rounded-lg hover:bg-primary-800 hover:text-white">
                     <button type="button"
-                        class="flex items-center justify-between w-full py-3 font-semibold text-left text-gray-900 border-b border-gray-200 hover:bg-gray-50"
-                        data-accordion-target="#accordion-ratings-body" aria-expanded="true"
-                        aria-controls="accordion-ratings-body">
+                        class="flex items-center justify-between w-full p-1.5 font-medium rtl:text-right gap-3"
+                        data-accordion-target="#accordion-flush-body-1" aria-expanded="true"
+                        aria-controls="accordion-flush-body-1">
                         <span>Ratings</span>
-                        <svg data-accordion-icon class="w-5 h-5 shrink-0" fill="none" stroke="currentColor"
-                            viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        <svg data-accordion-icon class="w-5 h-5 rotate-180 shrink-0" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="m5 15 7-7 7 7" />
                         </svg>
                     </button>
                 </h2>
-                <div id="accordion-ratings-body" class="hidden" aria-labelledby="accordion-ratings-heading">
-                    <div class="py-3 space-y-2">
-                        <!-- 5 Stars -->
-                        <div class="flex items-center justify-between p-2 hover:bg-gray-50 rounded-lg">
-                            <div class="flex items-center">
-                                <input id="rating-5" type="radio" name="rating"
-                                    class="w-4 h-4 text-emerald-600 border-gray-300 focus:ring-emerald-500">
-                                <label for="rating-5" class="ms-3 flex items-center gap-2">
-                                    <div class="flex">
-                                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                                            <path
-                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                        </svg>
-                                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                                            <path
-                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                        </svg>
-                                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                                            <path
-                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                        </svg>
-                                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                                            <path
-                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                        </svg>
-                                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                                            <path
-                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                        </svg>
-                                    </div>
-                                    <span class="text-sm text-gray-600">4.5 & up</span>
-                                </label>
+                <div id="accordion-flush-body-1" class="hidden" aria-labelledby="accordion-flush-heading-1">
+                    <ul class="space-y-2 text-sm">
+                        <li>
+                            <div class="flex items-center justify-between gap-10 p-2 rounded hover:bg-primary-50">
+                                <div class="flex items-center">
+                                    <input id="rating-4-5" type="radio" name="rating"
+                                        class="w-4 h-4 text-primary-800 bg-gray-100 border-gray-200 rounded-full">
+                                    <label for="rating-4-5" class="ms-2 text-sm font-medium text-gray-900">
+                                        <div class="flex px-1">
+                                            <svg class="w-4 h-4 text-[#FF8B00]" fill="currentColor" viewBox="0 0 20 20">
+                                                <path
+                                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                            </svg>
+                                            <svg class="w-4 h-4 text-[#FF8B00]" fill="currentColor" viewBox="0 0 20 20">
+                                                <path
+                                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                            </svg>
+                                            <svg class="w-4 h-4 text-[#FF8B00]" fill="currentColor" viewBox="0 0 20 20">
+                                                <path
+                                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                            </svg>
+                                            <svg class="w-4 h-4 text-[#FF8B00]" fill="currentColor" viewBox="0 0 20 20">
+                                                <path
+                                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                            </svg>
+                                            <svg class="w-4 h-4 text-[#FF8B00]" fill="currentColor" viewBox="0 0 20 20">
+                                                <path
+                                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                            </svg>
+                                            <span class="text-xs text-gray-500 font-medium whitespace-nowrap px-1">4.5
+                                                & up</span>
+                                        </div>
+                                    </label>
+                                </div>
+                                <span class="text-xs text-gray-500 font-medium">56</span>
                             </div>
-                            <span class="text-sm text-gray-500 font-medium">56</span>
-                        </div>
-
-                        <!-- 4 Stars -->
-                        <div class="flex items-center justify-between p-2 hover:bg-gray-50 rounded-lg">
-                            <div class="flex items-center">
-                                <input id="rating-4" type="radio" name="rating"
-                                    class="w-4 h-4 text-emerald-600 border-gray-300 focus:ring-emerald-500">
-                                <label for="rating-4" class="ms-3 flex items-center gap-2">
-                                    <div class="flex">
-                                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                                            <path
-                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                        </svg>
-                                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                                            <path
-                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                        </svg>
-                                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                                            <path
-                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                        </svg>
-                                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                                            <path
-                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                        </svg>
-                                        <svg class="w-4 h-4 text-gray-300" fill="currentColor" viewBox="0 0 20 20">
-                                            <path
-                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                        </svg>
-                                    </div>
-                                    <span class="text-sm text-gray-600">4.5 & up</span>
-                                </label>
+                        </li>
+                        <li>
+                            <div class="flex items-center justify-between gap-10 p-2 rounded hover:bg-primary-50">
+                                <div class="flex items-center">
+                                    <input id="rating-4-0" type="radio" name="rating"
+                                        class="w-4 h-4 text-primary-800 bg-gray-100 border-gray-200 rounded-full">
+                                    <label for="rating-4-0" class="ms-2 text-sm font-medium text-gray-900">
+                                        <div class="flex px-1">
+                                            <svg class="w-4 h-4 text-[#FF8B00]" fill="currentColor" viewBox="0 0 20 20">
+                                                <path
+                                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                            </svg>
+                                            <svg class="w-4 h-4 text-[#FF8B00]" fill="currentColor" viewBox="0 0 20 20">
+                                                <path
+                                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                            </svg>
+                                            <svg class="w-4 h-4 text-[#FF8B00]" fill="currentColor" viewBox="0 0 20 20">
+                                                <path
+                                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                            </svg>
+                                            <svg class="w-4 h-4 text-[#FF8B00]" fill="currentColor" viewBox="0 0 20 20">
+                                                <path
+                                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                            </svg>
+                                            <svg class="w-4 h-4 text-gray-300" fill="currentColor" viewBox="0 0 20 20">
+                                                <path
+                                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                            </svg>
+                                            <span class="text-xs text-gray-500 font-medium whitespace-nowrap px-1">4.0
+                                                & up</span>
+                                        </div>
+                                    </label>
+                                </div>
+                                <span class="text-xs text-gray-500 font-medium">42</span>
                             </div>
-                            <span class="text-sm text-gray-500 font-medium">15</span>
-                        </div>
-
-                        <!-- 3 Stars -->
-                        <div class="flex items-center justify-between p-2 hover:bg-gray-50 rounded-lg">
-                            <div class="flex items-center">
-                                <input id="rating-3" type="radio" name="rating"
-                                    class="w-4 h-4 text-emerald-600 border-gray-300 focus:ring-emerald-500">
-                                <label for="rating-3" class="ms-3 flex items-center gap-2">
-                                    <div class="flex">
-                                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                                            <path
-                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                        </svg>
-                                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                                            <path
-                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                        </svg>
-                                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                                            <path
-                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                        </svg>
-                                        <svg class="w-4 h-4 text-gray-300" fill="currentColor" viewBox="0 0 20 20">
-                                            <path
-                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                        </svg>
-                                        <svg class="w-4 h-4 text-gray-300" fill="currentColor" viewBox="0 0 20 20">
-                                            <path
-                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                        </svg>
-                                    </div>
-                                    <span class="text-sm text-gray-600">4.5 & up</span>
-                                </label>
+                        </li>
+                        <li>
+                            <div class="flex items-center justify-between gap-10 p-2 rounded hover:bg-primary-50">
+                                <div class="flex items-center">
+                                    <input id="rating-3-5" type="radio" name="rating"
+                                        class="w-4 h-4 text-primary-800 bg-gray-100 border-gray-200 rounded-full">
+                                    <label for="rating-3-5" class="ms-2 text-sm font-medium text-gray-900">
+                                        <div class="flex px-1">
+                                            <svg class="w-4 h-4 text-[#FF8B00]" fill="currentColor" viewBox="0 0 20 20">
+                                                <path
+                                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                            </svg>
+                                            <svg class="w-4 h-4 text-[#FF8B00]" fill="currentColor" viewBox="0 0 20 20">
+                                                <path
+                                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                            </svg>
+                                            <svg class="w-4 h-4 text-[#FF8B00]" fill="currentColor" viewBox="0 0 20 20">
+                                                <path
+                                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                            </svg>
+                                            <svg class="w-4 h-4 text-gray-300" fill="currentColor" viewBox="0 0 20 20">
+                                                <path
+                                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                            </svg>
+                                            <svg class="w-4 h-4 text-gray-300" fill="currentColor" viewBox="0 0 20 20">
+                                                <path
+                                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                            </svg>
+                                            <span class="text-xs text-gray-500 font-medium whitespace-nowrap px-1">3.5
+                                                & up</span>
+                                        </div>
+                                    </label>
+                                </div>
+                                <span class="text-xs text-gray-500 font-medium">28</span>
                             </div>
-                            <span class="text-sm text-gray-500 font-medium">30</span>
-                        </div>
-
-                        <!-- 2 Stars -->
-                        <div class="flex items-center justify-between p-2 hover:bg-gray-50 rounded-lg">
-                            <div class="flex items-center">
-                                <input id="rating-2" type="radio" name="rating"
-                                    class="w-4 h-4 text-emerald-600 border-gray-300 focus:ring-emerald-500">
-                                <label for="rating-2" class="ms-3 flex items-center gap-2">
-                                    <div class="flex">
-                                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                                            <path
-                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                        </svg>
-                                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                                            <path
-                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                        </svg>
-                                        <svg class="w-4 h-4 text-gray-300" fill="currentColor" viewBox="0 0 20 20">
-                                            <path
-                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                        </svg>
-                                        <svg class="w-4 h-4 text-gray-300" fill="currentColor" viewBox="0 0 20 20">
-                                            <path
-                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                        </svg>
-                                        <svg class="w-4 h-4 text-gray-300" fill="currentColor" viewBox="0 0 20 20">
-                                            <path
-                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                        </svg>
-                                    </div>
-                                    <span class="text-sm text-gray-600">4.5 & up</span>
-                                </label>
+                        </li>
+                        <li>
+                            <div class="flex items-center justify-between gap-10 p-2 rounded hover:bg-primary-50">
+                                <div class="flex items-center">
+                                    <input id="rating-3-0" type="radio" name="rating"
+                                        class="w-4 h-4 text-primary-800 bg-gray-100 border-gray-200 rounded-full">
+                                    <label for="rating-3-0" class="ms-2 text-sm font-medium text-gray-900">
+                                        <div class="flex px-1">
+                                            <svg class="w-4 h-4 text-[#FF8B00]" fill="currentColor" viewBox="0 0 20 20">
+                                                <path
+                                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                            </svg>
+                                            <svg class="w-4 h-4 text-[#FF8B00]" fill="currentColor" viewBox="0 0 20 20">
+                                                <path
+                                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                            </svg>
+                                            <svg class="w-4 h-4 text-[#FF8B00]" fill="currentColor" viewBox="0 0 20 20">
+                                                <path
+                                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                            </svg>
+                                            <svg class="w-4 h-4 text-gray-300" fill="currentColor" viewBox="0 0 20 20">
+                                                <path
+                                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                            </svg>
+                                            <svg class="w-4 h-4 text-gray-300" fill="currentColor" viewBox="0 0 20 20">
+                                                <path
+                                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                            </svg>
+                                            <span class="text-xs text-gray-500 font-medium whitespace-nowrap px-1">3.0
+                                                & up</span>
+                                        </div>
+                                    </label>
+                                </div>
+                                <span class="text-xs text-gray-500 font-medium">19</span>
                             </div>
-                            <span class="text-sm text-gray-500 font-medium">19</span>
-                        </div>
-                    </div>
-
-                    <button class="text-emerald-600 hover:text-emerald-700 text-sm font-medium mt-2 flex items-center">
-                        Show more
-                        <svg class="w-4 h-4 ms-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </button>
+                        </li>
+                        <li>
+                            <div class="flex items-center justify-between gap-10 p-2 rounded hover:bg-primary-50">
+                                <div class="flex items-center">
+                                    <input id="rating-2-5" type="radio" name="rating"
+                                        class="w-4 h-4 text-primary-800 bg-gray-100 border-gray-200 rounded-full">
+                                    <label for="rating-2-5" class="ms-2 text-sm font-medium text-gray-900">
+                                        <div class="flex px-1">
+                                            <svg class="w-4 h-4 text-[#FF8B00]" fill="currentColor" viewBox="0 0 20 20">
+                                                <path
+                                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                            </svg>
+                                            <svg class="w-4 h-4 text-[#FF8B00]" fill="currentColor" viewBox="0 0 20 20">
+                                                <path
+                                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                            </svg>
+                                            <svg class="w-4 h-4 text-gray-300" fill="currentColor" viewBox="0 0 20 20">
+                                                <path
+                                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                            </svg>
+                                            <svg class="w-4 h-4 text-gray-300" fill="currentColor" viewBox="0 0 20 20">
+                                                <path
+                                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                            </svg>
+                                            <svg class="w-4 h-4 text-gray-300" fill="currentColor" viewBox="0 0 20 20">
+                                                <path
+                                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                            </svg>
+                                            <span class="text-xs text-gray-500 font-medium whitespace-nowrap px-1">2.5
+                                                & up</span>
+                                        </div>
+                                    </label>
+                                </div>
+                                <span class="text-xs text-gray-500 font-medium">12</span>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
 
-            <!-- Language Accordion -->
-            <div id="accordion-language" class="mb-6 border-t border-gray-200 pt-4">
-                <h2 id="accordion-language-heading">
+            <div id="accordion-flush2" data-accordion="collapse" data-active-classes="text-heading"
+                data-inactive-classes="text-body">
+                <h2 id="accordion-flush2-heading-1" class="rounded-lg hover:bg-primary-800 hover:text-white">
                     <button type="button"
-                        class="flex items-center justify-between w-full py-3 font-semibold text-left text-gray-900 hover:bg-gray-50"
-                        data-accordion-target="#accordion-language-body" aria-expanded="false"
-                        aria-controls="accordion-language-body">
-                        <span>Language</span>
-                        <svg data-accordion-icon class="w-5 h-5 shrink-0 rotate-180" fill="none" stroke="currentColor"
-                            viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        class="flex items-center justify-between w-full p-1.5 font-medium rtl:text-right gap-3"
+                        data-accordion-target="#accordion-flush2-body-1" aria-expanded="true"
+                        aria-controls="accordion-flush2-body-1">
+                        <span>language</span>
+                        <svg data-accordion-icon class="w-5 h-5 rotate-180 shrink-0" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="m5 15 7-7 7 7" />
                         </svg>
                     </button>
                 </h2>
-                <div id="accordion-language-body" class="hidden" aria-labelledby="accordion-language-heading">
-                    <div class="py-3">
-                        <!-- Search Languages -->
-                        <div class="mb-3">
-                            <div class="relative">
-                                <input type="search"
-                                    class="block w-full p-2.5 ps-3 pe-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-white focus:ring-emerald-500 focus:border-emerald-500"
-                                    placeholder="Search Language(s)" />
-                                <button
-                                    class="absolute end-2 top-1/2 -translate-y-1/2 text-white bg-emerald-600 p-1.5 rounded-md">
-                                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 20 20">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-
-                        <div class="space-y-2">
-                            <!-- English (Selected) -->
-                            <div class="flex items-center justify-between p-2 hover:bg-gray-50 rounded-lg">
+                <div id="accordion-flush2-body-1" class="hidden" aria-labelledby="accordion-flush2-heading-1">
+                    <ul class="space-y-2">
+                        <li>
+                            <div class="flex items-center justify-between gap-10 p-2 rounded hover:bg-primary-50">
                                 <div class="flex items-center">
-                                    <input checked id="lang-english" type="checkbox"
-                                        class="w-4 h-4 text-emerald-600 border-gray-300 rounded focus:ring-emerald-500">
-                                    <label for="lang-english"
-                                        class="ms-3 text-sm font-medium text-gray-900">English</label>
+                                    <input id="english" type="radio" name="language-radio"
+                                        class="w-4 h-4 text-primary-800 bg-gray-100 border-gray-200 rounded-full">
+                                    <label for="english" class="ms-2 text-sm font-medium text-gray-900">English</label>
                                 </div>
-                                <span class="text-sm text-gray-500 font-medium">(20)</span>
+                                <span class="text-xs text-gray-500 font-medium">20</span>
                             </div>
-
-                            <!-- Turkce -->
-                            <div class="flex items-center justify-between p-2 hover:bg-gray-50 rounded-lg">
+                        </li>
+                        <li>
+                            <div class="flex items-center justify-between gap-10 p-2 rounded hover:bg-primary-50">
                                 <div class="flex items-center">
-                                    <input id="lang-turkce" type="checkbox"
-                                        class="w-4 h-4 text-emerald-600 border-gray-300 rounded focus:ring-emerald-500">
-                                    <label for="lang-turkce"
-                                        class="ms-3 text-sm font-medium text-gray-900">Turkce</label>
+                                    <input id="turkce" type="radio" name="language-radio"
+                                        class="w-4 h-4 text-primary-800 bg-gray-100 border-gray-200 rounded-full">
+                                    <label for="turkce" class="ms-2 text-sm font-medium text-gray-900">Turkce</label>
                                 </div>
-                                <span class="text-sm text-gray-500 font-medium">(2)</span>
+                                <span class="text-xs text-gray-500 font-medium">2</span>
                             </div>
-
-                            <!-- Arabic -->
-                            <div class="flex items-center justify-between p-2 hover:bg-gray-50 rounded-lg">
+                        </li>
+                        <li>
+                            <div class="flex items-center justify-between gap-10 p-2 rounded hover:bg-primary-50">
                                 <div class="flex items-center">
-                                    <input id="lang-arabic" type="checkbox"
-                                        class="w-4 h-4 text-emerald-600 border-gray-300 rounded focus:ring-emerald-500">
-                                    <label for="lang-arabic"
-                                        class="ms-3 text-sm font-medium text-gray-900">Arabic</label>
+                                    <input id="arabic" type="radio" name="language-radio"
+                                        class="w-4 h-4 text-primary-800 bg-gray-100 border-gray-200 rounded-full">
+                                    <label for="arabic" class="ms-2 text-sm font-medium text-gray-900">Arabic</label>
                                 </div>
-                                <span class="text-sm text-gray-500 font-medium">(15)</span>
+                                <span class="text-xs text-gray-500 font-medium">15</span>
                             </div>
-
-                            <!-- Spanish -->
-                            <div class="flex items-center justify-between p-2 hover:bg-gray-50 rounded-lg">
+                        </li>
+                        <li>
+                            <div class="flex items-center justify-between gap-10 p-2 rounded hover:bg-primary-50">
                                 <div class="flex items-center">
-                                    <input id="lang-spanish" type="checkbox"
-                                        class="w-4 h-4 text-emerald-600 border-gray-300 rounded focus:ring-emerald-500">
-                                    <label for="lang-spanish"
-                                        class="ms-3 text-sm font-medium text-gray-900">Spanish</label>
+                                    <input id="spanish" type="radio" name="language-radio"
+                                        class="w-4 h-4 text-primary-800 bg-gray-100 border-gray-200 rounded-full">
+                                    <label for="spanish" class="ms-2 text-sm font-medium text-gray-900">Spanish</label>
                                 </div>
-                                <span class="text-sm text-gray-500 font-medium">(26)</span>
+                                <span class="text-xs text-gray-500 font-medium">26</span>
                             </div>
-                        </div>
-
-                        <button
-                            class="text-emerald-600 hover:text-emerald-700 text-sm font-medium mt-3 flex items-center">
-                            Show more
-                            <svg class="w-4 h-4 ms-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M19 9l-7 7-7-7" />
-                            </svg>
-                        </button>
-                    </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
 
-            <!-- Level Accordion -->
-            <div id="accordion-level" class="mb-6 border-t border-gray-200 pt-4">
-                <h2 id="accordion-level-heading">
-                    <button type="button"
-                        class="flex items-center justify-between w-full py-3 font-semibold text-left text-gray-900 hover:bg-gray-50"
-                        data-accordion-target="#accordion-level-body" aria-expanded="false"
-                        aria-controls="accordion-level-body">
-                        <span>Level</span>
-                        <svg data-accordion-icon class="w-5 h-5 shrink-0 rotate-180" fill="none" stroke="currentColor"
-                            viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            <div id="accordion-flush3" data-accordion="collapse" data-active-classes="text-heading"
+                data-inactive-classes="text-body">
+                <h2 id="accordion-flush3-heading-1" class="rounded-lg hover:bg-primary-800 hover:text-white">
+                    <button type="button" class="flex items-center justify-between w-full p-1.5 font-medium gap-3 "
+                        data-accordion-target="#accordion-flush3-body-1" aria-expanded="true"
+                        aria-controls="accordion-flush3-body-1">
+                        <span>level</span>
+                        <svg data-accordion-icon class="w-5 h-5 rotate-180 shrink-0" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="m5 15 7-7 7 7" />
                         </svg>
                     </button>
                 </h2>
-                <div id="accordion-level-body" class="hidden" aria-labelledby="accordion-level-heading">
-                    <div class="py-3 space-y-2">
-                        <!-- All Levels -->
-                        <div class="flex items-center justify-between p-2 hover:bg-gray-50 rounded-lg">
-                            <div class="flex items-center">
-                                <input id="level-all" type="checkbox"
-                                    class="w-4 h-4 text-emerald-600 border-gray-300 rounded focus:ring-emerald-500">
-                                <label for="level-all" class="ms-3 text-sm font-medium text-gray-900">All
-                                    Levels</label>
+                <div id="accordion-flush3-body-1" class="hidden" aria-labelledby="accordion-flush3-heading-1">
+                    <ul class="space-y-2">
+                        <li>
+                            <div class="flex items-center justify-between gap-10 p-2 rounded hover:bg-primary-50">
+                                <div class="flex items-center">
+                                    <input id="english" type="radio" name="language-radio"
+                                        class="w-4 h-4 text-primary-800 bg-gray-100 border-gray-200 rounded-full">
+                                    <label for="english" class="ms-2 text-sm font-medium text-gray-900">all
+                                        levels</label>
+                                </div>
+                                <span class="text-xs text-gray-500 font-medium">60</span>
                             </div>
-                            <span class="text-sm text-gray-500 font-medium">60</span>
-                        </div>
-
-                        <!-- Beginner (Selected) -->
-                        <div class="flex items-center justify-between p-2 hover:bg-gray-50 rounded-lg">
-                            <div class="flex items-center">
-                                <input checked id="level-beginner" type="checkbox"
-                                    class="w-4 h-4 text-emerald-600 border-gray-300 rounded focus:ring-emerald-500">
-                                <label for="level-beginner"
-                                    class="ms-3 text-sm font-medium text-gray-900">Beginner</label>
+                        </li>
+                        <li>
+                            <div class="flex items-center justify-between gap-10 p-2 rounded hover:bg-primary-50">
+                                <div class="flex items-center">
+                                    <input id="turkce" type="radio" name="language-radio"
+                                        class="w-4 h-4 text-primary-800 bg-gray-100 border-gray-200 rounded-full">
+                                    <label for="turkce" class="ms-2 text-sm font-medium text-gray-900">benginner</label>
+                                </div>
+                                <span class="text-xs text-gray-500 font-medium">2</span>
                             </div>
-                            <span class="text-sm text-gray-500 font-medium">42</span>
-                        </div>
-
-                        <!-- Intermediate -->
-                        <div class="flex items-center justify-between p-2 hover:bg-gray-50 rounded-lg">
-                            <div class="flex items-center">
-                                <input id="level-intermediate" type="checkbox"
-                                    class="w-4 h-4 text-emerald-600 border-gray-300 rounded focus:ring-emerald-500">
-                                <label for="level-intermediate"
-                                    class="ms-3 text-sm font-medium text-gray-900">Intermediate</label>
+                        </li>
+                        <li>
+                            <div class="flex items-center justify-between gap-10 p-2 rounded hover:bg-primary-50">
+                                <div class="flex items-center">
+                                    <input id="arabic" type="radio" name="language-radio"
+                                        class="w-4 h-4 text-primary-800 bg-gray-100 border-gray-200 rounded-full">
+                                    <label for="arabic"
+                                        class="ms-2 text-sm font-medium text-gray-900">intermediate</label>
+                                </div>
+                                <span class="text-xs text-gray-500 font-medium">15</span>
                             </div>
-                            <span class="text-sm text-gray-500 font-medium">5</span>
-                        </div>
-
-                        <!-- Expert (Selected) -->
-                        <div class="flex items-center justify-between p-2 hover:bg-gray-50 rounded-lg">
-                            <div class="flex items-center">
-                                <input checked id="level-expert" type="checkbox"
-                                    class="w-4 h-4 text-emerald-600 border-gray-300 rounded focus:ring-emerald-500">
-                                <label for="level-expert" class="ms-3 text-sm font-medium text-gray-900">Expert</label>
+                        </li>
+                        <li>
+                            <div class="flex items-center justify-between gap-10 p-2 rounded hover:bg-primary-50">
+                                <div class="flex items-center">
+                                    <input id="spanish" type="radio" name="language-radio"
+                                        class="w-4 h-4 text-primary-800 bg-gray-100 border-gray-200 rounded-full">
+                                    <label for="spanish" class="ms-2 text-sm font-medium text-gray-900">expert</label>
+                                </div>
+                                <span class="text-xs text-gray-500 font-medium">26</span>
                             </div>
-                            <span class="text-sm text-gray-500 font-medium">1</span>
-                        </div>
-                    </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
 
         </div>
     </div>
-
-
-
-
 
     <!-- zoom modal -->
     <div id="zoom-courses-modal" tabindex="-1" aria-hidden="true"
@@ -2283,12 +2285,12 @@
     </div>
 
 
-
-
-
-
     <script src="js/flowbite.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
+    <script>
+        AOS.init();
+    </script>
     <script>
         // تفعيل حركة الأسهم لجميع الـ Dropdowns
         document.addEventListener('DOMContentLoaded', function () {
