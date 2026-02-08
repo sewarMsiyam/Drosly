@@ -1945,6 +1945,10 @@ body{
   margin-top: auto;
 }
 
+.mt-10{
+  margin-top: 2.5rem;
+}
+
 .box-border{
   box-sizing: border-box;
 }
@@ -2283,6 +2287,18 @@ body{
 
 .w-screen{
   width: 100vw;
+}
+
+.w-96{
+  width: 24rem;
+}
+
+.w-\[430px\]{
+  width: 430px;
+}
+
+.w-\[450px\]{
+  width: 450px;
 }
 
 .min-w-0{
@@ -4513,6 +4529,11 @@ body{
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-\[\#A2A2A2\]{
+  --tw-text-opacity: 1;
+  color: rgb(162 162 162 / var(--tw-text-opacity));
 }
 
 .underline{
