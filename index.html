@@ -370,42 +370,282 @@
             <button class="btn btn-primary">
               Sign Up
             </button>
-            <!-- Cart button -->
-            <button class="w-10 h-10 btn-icon btn-light-primary px-1 hover:bg-light-100">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M7 18C5.9 18 5.01 18.9 5.01 20C5.01 21.1 5.9 22 7 22C8.1 22 9 21.1 9 20C9 18.9 8.1 18 7 18ZM1 3C1 3.55 1.45 4 2 4H3L6.6 11.59L5.25 14.03C4.52 15.37 5.48 17 7 17H18C18.55 17 19 16.55 19 16C19 15.45 18.55 15 18 15H7L8.1 13H15.55C16.3 13 16.96 12.59 17.3 11.97L20.88 5.48C20.9643 5.32842 21.0075 5.15747 21.0054 4.98405C21.0034 4.81064 20.956 4.64077 20.8681 4.49126C20.7803 4.34175 20.6549 4.21778 20.5043 4.13162C20.3538 4.04545 20.1834 4.00008 20.01 4H5.21L4.54 2.57C4.45993 2.39908 4.33266 2.25461 4.17321 2.15362C4.01375 2.05263 3.82875 1.99933 3.64 2H2C1.45 2 1 2.45 1 3ZM17 18C15.9 18 15.01 18.9 15.01 20C15.01 21.1 15.9 22 17 22C18.1 22 19 21.1 19 20C19 18.9 18.1 18 17 18Z"
-                  class="fill-primary-500" />
-              </svg>
-            </button>
+            <!-- Cart button -->   
+            <div>
+              <button class="w-10 h-10 relative btn-icon btn-light-primary px-1 hover:bg-light-100" command="show-modal"
+                commandfor="drawer">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M7 18C5.9 18 5.01 18.9 5.01 20C5.01 21.1 5.9 22 7 22C8.1 22 9 21.1 9 20C9 18.9 8.1 18 7 18ZM1 3C1 3.55 1.45 4 2 4H3L6.6 11.59L5.25 14.03C4.52 15.37 5.48 17 7 17H18C18.55 17 19 16.55 19 16C19 15.45 18.55 15 18 15H7L8.1 13H15.55C16.3 13 16.96 12.59 17.3 11.97L20.88 5.48C20.9643 5.32842 21.0075 5.15747 21.0054 4.98405C21.0034 4.81064 20.956 4.64077 20.8681 4.49126C20.7803 4.34175 20.6549 4.21778 20.5043 4.13162C20.3538 4.04545 20.1834 4.00008 20.01 4H5.21L4.54 2.57C4.45993 2.39908 4.33266 2.25461 4.17321 2.15362C4.01375 2.05263 3.82875 1.99933 3.64 2H2C1.45 2 1 2.45 1 3ZM17 18C15.9 18 15.01 18.9 15.01 20C15.01 21.1 15.9 22 17 22C18.1 22 19 21.1 19 20C19 18.9 18.1 18 17 18Z"
+                    class="fill-primary-500" />
+                </svg>
+                <span
+                  class="absolute top-[10px] left-[20px] transform -translate-y-1/2 w-4 h-4 text-xs bg-[#FF3D00] text-white rounded-full">1</span>
+              </button>
+
+              <el-dialog>
+                <dialog id="drawer" aria-labelledby="drawer-title"
+                  class="fixed inset-0 m-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent p-0 backdrop:bg-transparent [&:not([open],:popover-open,:open)]:hidden">
+                  <el-dialog-backdrop
+                    class="absolute inset-0 bg-gray-500/75 transition-opacity duration-500 ease-in-out data-[closed]:opacity-0"></el-dialog-backdrop>
+
+                  <div tabindex="0" class="absolute inset-0 pl-10 focus:outline focus:outline-0 sm:pl-16">
+                    <el-dialog-panel
+                      class="ml-auto block size-full max-w-md transform transition duration-500 ease-in-out data-[closed]:translate-x-full sm:duration-700">
+                      <div class="flex h-full flex-col overflow-y-auto bg-white shadow-xl">
+                        <div class="flex-1 overflow-y-auto px-4 py-6 sm:px-6">
+                          <div class="flex items-start justify-between">
+                            <h2 id="drawer-title" class="text-lg font-medium text-gray-900">Shopping cart</h2>
+                            <div class="ml-3 flex h-7 items-center">
+                              <button type="button" command="close" commandfor="drawer"
+                                class="relative -m-2 p-2 text-gray-400 hover:text-gray-500">
+                                <span class="absolute -inset-0.5"></span>
+                                <span class="sr-only">Close panel</span>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                  data-slot="icon" aria-hidden="true" class="size-6">
+                                  <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                              </button>
+                            </div>
+                          </div>
+
+                          <div class="mt-8">
+                            <div class="flow-root">
+                              <ul role="list" class="-my-6 divide-y divide-gray-200">
+                                <li class="flex py-6">
+                                  <div class="size-24 shrink-0 overflow-hidden rounded-md border border-gray-200">
+                                    <img
+                                      src="https://tailwindcss.com/plus-assets/img/ecommerce-images/shopping-cart-page-04-product-01.jpg"
+                                      alt="Salmon orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt."
+                                      class="size-full object-cover" />
+                                  </div>
+
+                                  <div class="ml-4 flex flex-1 flex-col">
+                                    <div>
+                                      <div class="flex justify-between text-base font-medium text-gray-900">
+                                        <h3>
+                                          <a href="#">Throwback Hip Bag</a>
+                                        </h3>
+                                        <p class="ml-4">$90.00</p>
+                                      </div>
+                                      <p class="mt-1 text-sm text-gray-500">Salmon</p>
+                                    </div>
+                                    <div class="flex flex-1 items-end justify-between text-sm">
+                                      <p class="text-gray-500">Qty 1</p>
+
+                                      <div class="flex">
+                                        <button type="button"
+                                          class="font-medium text-indigo-600 hover:text-indigo-500">Remove</button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="border-t border-gray-200 px-4 py-6 sm:px-6">
+                          <div class="flex justify-between text-base font-medium text-gray-900">
+                            <p>Subtotal</p>
+                            <p>$262.00</p>
+                          </div>
+                          <p class="mt-0.5 text-sm text-gray-500">Shipping and taxes calculated at checkout.</p>
+                          <div class="mt-6">
+                            <a href="#"
+                              class="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700">Checkout</a>
+                          </div>
+                          <div class="mt-6 flex justify-center text-center text-sm text-gray-500">
+                            <p>
+                              or
+                              <button type="button" command="close" commandfor="drawer"
+                                class="font-medium text-indigo-600 hover:text-indigo-500">
+                                Continue Shopping
+                                <span aria-hidden="true"> &rarr;</span>
+                              </button>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </el-dialog-panel>
+                  </div>
+                </dialog>
+              </el-dialog>
+
+            </div>
+
             <!-- Switch Lang button -->
-            <button class="w-10 h-10 btn-icon btn-light-primary px-1 hover:bg-light-100">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M12 22C17.523 22 22 17.523 22 12C22 6.477 17.523 2 12 2C6.477 2 2 6.477 2 12C2 17.523 6.477 22 12 22Z"
-                  class="stroke-primary-500" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                <path d="M2 12H22" class="stroke-primary-500" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round" />
-                <path
-                  d="M12 22C14.209 22 16 17.523 16 12C16 6.477 14.209 2 12 2C9.791 2 8 6.477 8 12C8 17.523 9.791 22 12 22Z"
-                  class="stroke-primary-500" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                <path
-                  d="M4.92896 5.071C5.85654 6.00092 6.95873 6.73839 8.1722 7.24104C9.38567 7.74369 10.6865 8.00162 12 8C13.3134 8.00162 14.6142 7.74369 15.8277 7.24104C17.0412 6.73839 18.1434 6.00092 19.071 5.071M19.071 18.929C18.1434 17.9991 17.0412 17.2616 15.8277 16.759C14.6142 16.2563 13.3134 15.9984 12 16C10.6865 15.9984 9.38567 16.2563 8.1722 16.759C6.95873 17.2616 5.85654 17.9991 4.92896 18.929"
-                  class="stroke-primary-500" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-            </button>
+            <div>
+              <button class="w-10 h-10 btn-icon btn-light-primary px-1 hover:bg-light-100"
+                data-dropdown-toggle="langDropdown" data-dropdown-placement="bottom-start" id="langButton">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M12 22C17.523 22 22 17.523 22 12C22 6.477 17.523 2 12 2C6.477 2 2 6.477 2 12C2 17.523 6.477 22 12 22Z"
+                    class="stroke-primary-500" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M2 12H22" class="stroke-primary-500" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <path
+                    d="M12 22C14.209 22 16 17.523 16 12C16 6.477 14.209 2 12 2C9.791 2 8 6.477 8 12C8 17.523 9.791 22 12 22Z"
+                    class="stroke-primary-500" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    d="M4.92896 5.071C5.85654 6.00092 6.95873 6.73839 8.1722 7.24104C9.38567 7.74369 10.6865 8.00162 12 8C13.3134 8.00162 14.6142 7.74369 15.8277 7.24104C17.0412 6.73839 18.1434 6.00092 19.071 5.071M19.071 18.929C18.1434 17.9991 17.0412 17.2616 15.8277 16.759C14.6142 16.2563 13.3134 15.9984 12 16C10.6865 15.9984 9.38567 16.2563 8.1722 16.759C6.95873 17.2616 5.85654 17.9991 4.92896 18.929"
+                    class="stroke-primary-500" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+              <div id="langDropdown"
+                class="z-10 hidden bg-white border border-default-medium rounded-lg shadow-lg w-auto">
+                <ul class="p-2 text-sm text-body font-medium" aria-labelledby="langButton">
+                  <li>
+                    <a href="#"
+                      class="flex items-center w-full gap-2 p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded-md">
+                      <img src="images/ar.svg" class="w-4 h-4" alt="Arabic">
+                      Arabic</a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      class="flex items-center w-full gap-2 p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded-md">
+                      <img src="images/en.svg" class="w-4 h-4" alt="Arabic">
+                      English</a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      class="flex items-center w-full gap-2 p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded-md">
+                      <img src="images/turkey.svg" class="w-4 h-4" alt="Arabic">
+                      turkey</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+
 
             <!-- Auth true - logo in header button -->
             <!-- Notifications button -->
-            <a href="" class="relative w-10 h-10 btn-icon btn-light-primary px-1 hover:bg-light-100">
-              <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M6.03985 17H11.9558C11.8376 17.699 11.4757 18.3335 10.9342 18.7911C10.3928 19.2487 9.70677 19.4998 8.99785 19.4998C8.28893 19.4998 7.60291 19.2487 7.06145 18.7911C6.51998 18.3335 6.15805 17.699 6.03985 17ZM8.99785 0C10.987 0 12.8946 0.790176 14.3011 2.1967C15.7077 3.60322 16.4978 5.51088 16.4978 7.5V11.5L17.9158 14.66C17.9803 14.8045 18.0077 14.9629 17.9954 15.1206C17.9831 15.2784 17.9316 15.4306 17.8456 15.5635C17.7596 15.6963 17.6417 15.8055 17.5027 15.8812C17.3638 15.9569 17.2081 15.9967 17.0498 15.997H0.949846C0.791378 15.997 0.635434 15.9573 0.496213 15.8816C0.356993 15.8059 0.238919 15.6966 0.152745 15.5636C0.0665699 15.4306 0.0150319 15.2782 0.00282358 15.1202C-0.00938473 14.9622 0.0181246 14.8036 0.0828464 14.659L1.49785 11.499V7.487L1.50285 7.237C1.57125 5.29485 2.39084 3.45508 3.78895 2.10529C5.18705 0.755502 7.05449 9.12495e-05 8.99785 0Z"
-                  fill="#2EB97E" />
-              </svg>
-              <span
-                class="absolute top-[10px] left-[20px] transform -translate-y-1/2 w-3 h-3 bg-[#FF3D00] rounded-full"></span>
-            </a>
+            <div>
+              <button class="relative w-10 h-10 btn-icon btn-light-primary px-1 hover:bg-light-100"
+                data-dropdown-toggle="NotificationsDropdown" data-dropdown-placement="bottom-start"
+                id="NotificationsButton">
+                <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M6.03985 17H11.9558C11.8376 17.699 11.4757 18.3335 10.9342 18.7911C10.3928 19.2487 9.70677 19.4998 8.99785 19.4998C8.28893 19.4998 7.60291 19.2487 7.06145 18.7911C6.51998 18.3335 6.15805 17.699 6.03985 17ZM8.99785 0C10.987 0 12.8946 0.790176 14.3011 2.1967C15.7077 3.60322 16.4978 5.51088 16.4978 7.5V11.5L17.9158 14.66C17.9803 14.8045 18.0077 14.9629 17.9954 15.1206C17.9831 15.2784 17.9316 15.4306 17.8456 15.5635C17.7596 15.6963 17.6417 15.8055 17.5027 15.8812C17.3638 15.9569 17.2081 15.9967 17.0498 15.997H0.949846C0.791378 15.997 0.635434 15.9573 0.496213 15.8816C0.356993 15.8059 0.238919 15.6966 0.152745 15.5636C0.0665699 15.4306 0.0150319 15.2782 0.00282358 15.1202C-0.00938473 14.9622 0.0181246 14.8036 0.0828464 14.659L1.49785 11.499V7.487L1.50285 7.237C1.57125 5.29485 2.39084 3.45508 3.78895 2.10529C5.18705 0.755502 7.05449 9.12495e-05 8.99785 0Z"
+                    fill="#2EB97E" />
+                </svg>
+                <span
+                  class="absolute top-[10px] left-[20px] transform -translate-y-1/2 w-3 h-3 bg-[#FF3D00] rounded-full"></span>
+              </button>
+
+              <div id="NotificationsDropdown"
+                class="z-10 hidden bg-white border border-default-medium rounded-lg shadow-lg w-auto px-3 h-96 overflow-auto">
+                <ul role="list" class="divide-y divide-gray-100">
+                  <li class="flex justify-between gap-x-6 py-5">
+                    <div class="flex min-w-0 gap-x-4">
+                      <img
+                        src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                        alt="" class="size-12 flex-none rounded-full bg-gray-50" />
+                      <div class="min-w-0 flex-auto">
+                        <p class="text-sm/6 font-semibold text-gray-900">Leslie Alexander</p>
+                        <p class="mt-1 truncate text-xs/5 text-gray-500">leslie.alexander@example.com</p>
+                      </div>
+                    </div>
+                    <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
+                      <p class="text-sm/6 text-gray-900">Co-Founder / CEO</p>
+                      <p class="mt-1 text-xs/5 text-gray-500">Last seen <time datetime="2023-01-23T13:23Z">3h ago</time>
+                      </p>
+                    </div>
+                  </li>
+                  <li class="flex justify-between gap-x-6 py-5">
+                    <div class="flex min-w-0 gap-x-4">
+                      <img
+                        src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                        alt="" class="size-12 flex-none rounded-full bg-gray-50" />
+                      <div class="min-w-0 flex-auto">
+                        <p class="text-sm/6 font-semibold text-gray-900">Michael Foster</p>
+                        <p class="mt-1 truncate text-xs/5 text-gray-500">michael.foster@example.com</p>
+                      </div>
+                    </div>
+                    <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
+                      <p class="text-sm/6 text-gray-900">Co-Founder / CTO</p>
+                      <p class="mt-1 text-xs/5 text-gray-500">Last seen <time datetime="2023-01-23T13:23Z">3h ago</time>
+                      </p>
+                    </div>
+                  </li>
+                  <li class="flex justify-between gap-x-6 py-5">
+                    <div class="flex min-w-0 gap-x-4">
+                      <img
+                        src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                        alt="" class="size-12 flex-none rounded-full bg-gray-50" />
+                      <div class="min-w-0 flex-auto">
+                        <p class="text-sm/6 font-semibold text-gray-900">Dries Vincent</p>
+                        <p class="mt-1 truncate text-xs/5 text-gray-500">dries.vincent@example.com</p>
+                      </div>
+                    </div>
+                    <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
+                      <p class="text-sm/6 text-gray-900">Business Relations</p>
+                      <div class="mt-1 flex items-center gap-x-1.5">
+                        <div class="flex-none rounded-full bg-emerald-500/20 p-1">
+                          <div class="size-1.5 rounded-full bg-emerald-500"></div>
+                        </div>
+                        <p class="text-xs/5 text-gray-500">Online</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="flex justify-between gap-x-6 py-5">
+                    <div class="flex min-w-0 gap-x-4">
+                      <img
+                        src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                        alt="" class="size-12 flex-none rounded-full bg-gray-50" />
+                      <div class="min-w-0 flex-auto">
+                        <p class="text-sm/6 font-semibold text-gray-900">Lindsay Walton</p>
+                        <p class="mt-1 truncate text-xs/5 text-gray-500">lindsay.walton@example.com</p>
+                      </div>
+                    </div>
+                    <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
+                      <p class="text-sm/6 text-gray-900">Front-end Developer</p>
+                      <p class="mt-1 text-xs/5 text-gray-500">Last seen <time datetime="2023-01-23T13:23Z">3h ago</time>
+                      </p>
+                    </div>
+                  </li>
+                  <li class="flex justify-between gap-x-6 py-5">
+                    <div class="flex min-w-0 gap-x-4">
+                      <img
+                        src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                        alt="" class="size-12 flex-none rounded-full bg-gray-50" />
+                      <div class="min-w-0 flex-auto">
+                        <p class="text-sm/6 font-semibold text-gray-900">Courtney Henry</p>
+                        <p class="mt-1 truncate text-xs/5 text-gray-500">courtney.henry@example.com</p>
+                      </div>
+                    </div>
+                    <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
+                      <p class="text-sm/6 text-gray-900">Designer</p>
+                      <p class="mt-1 text-xs/5 text-gray-500">Last seen <time datetime="2023-01-23T13:23Z">3h ago</time>
+                      </p>
+                    </div>
+                  </li>
+                  <li class="flex justify-between gap-x-6 py-5">
+                    <div class="flex min-w-0 gap-x-4">
+                      <img
+                        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                        alt="" class="size-12 flex-none rounded-full bg-gray-50" />
+                      <div class="min-w-0 flex-auto">
+                        <p class="text-sm/6 font-semibold text-gray-900">Tom Cook</p>
+                        <p class="mt-1 truncate text-xs/5 text-gray-500">tom.cook@example.com</p>
+                      </div>
+                    </div>
+                    <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
+                      <p class="text-sm/6 text-gray-900">Director of Product</p>
+                      <div class="mt-1 flex items-center gap-x-1.5">
+                        <div class="flex-none rounded-full bg-emerald-500/20 p-1">
+                          <div class="size-1.5 rounded-full bg-emerald-500"></div>
+                        </div>
+                        <p class="text-xs/5 text-gray-500">Online</p>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+
+              </div>
+            </div>
+
             <!-- user dropdown -->
             <div>
               <div class="flex items-center gap-1.5  rounded-full cursor-pointer" data-dropdown-toggle="userDropdown"
@@ -446,14 +686,119 @@
                   </li>
                 </ul>
               </div>
-            </div> 
+            </div>
             <!--end Auth true - logo in header button -->
 
           </div>
           <!-- Mobile Menu Button -->
           <div class="flex items-center gap-2 lg:hidden">
+            <!-- Cart button -->
             <div class="lg:hidden">
-              <a href="" class="relative w-10 h-10 btn-icon btn-light-primary px-1 hover:bg-light-100">
+              <button class="w-10 h-10 relative btn-icon btn-light-primary px-1 hover:bg-light-100" command="show-modal"
+                commandfor="drawerMobile">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M7 18C5.9 18 5.01 18.9 5.01 20C5.01 21.1 5.9 22 7 22C8.1 22 9 21.1 9 20C9 18.9 8.1 18 7 18ZM1 3C1 3.55 1.45 4 2 4H3L6.6 11.59L5.25 14.03C4.52 15.37 5.48 17 7 17H18C18.55 17 19 16.55 19 16C19 15.45 18.55 15 18 15H7L8.1 13H15.55C16.3 13 16.96 12.59 17.3 11.97L20.88 5.48C20.9643 5.32842 21.0075 5.15747 21.0054 4.98405C21.0034 4.81064 20.956 4.64077 20.8681 4.49126C20.7803 4.34175 20.6549 4.21778 20.5043 4.13162C20.3538 4.04545 20.1834 4.00008 20.01 4H5.21L4.54 2.57C4.45993 2.39908 4.33266 2.25461 4.17321 2.15362C4.01375 2.05263 3.82875 1.99933 3.64 2H2C1.45 2 1 2.45 1 3ZM17 18C15.9 18 15.01 18.9 15.01 20C15.01 21.1 15.9 22 17 22C18.1 22 19 21.1 19 20C19 18.9 18.1 18 17 18Z"
+                    class="fill-primary-500" />
+                </svg>
+                 <span
+                  class="absolute top-[10px] left-[20px] transform -translate-y-1/2 w-4 h-4 text-xs bg-[#FF3D00] text-white rounded-full">1</span>
+              </button>
+
+              <el-dialog>
+                <dialog id="drawerMobile" aria-labelledby="drawer-title"
+                  class="fixed inset-0 m-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent p-0 backdrop:bg-transparent [&:not([open],:popover-open,:open)]:hidden">
+                  <el-dialog-backdrop
+                    class="absolute inset-0 bg-gray-500/75 transition-opacity duration-500 ease-in-out data-[closed]:opacity-0"></el-dialog-backdrop>
+
+                  <div tabindex="0" class="absolute inset-0 pl-10 focus:outline focus:outline-0 sm:pl-16">
+                    <el-dialog-panel
+                      class="ml-auto block size-full max-w-md transform transition duration-500 ease-in-out data-[closed]:translate-x-full sm:duration-700">
+                      <div class="flex h-full flex-col overflow-y-auto bg-white shadow-xl">
+                        <div class="flex-1 overflow-y-auto px-4 py-6 sm:px-6">
+                          <div class="flex items-start justify-between">
+                            <h2 id="drawer-title" class="text-lg font-medium text-gray-900">Shopping cart</h2>
+                            <div class="ml-3 flex h-7 items-center">
+                              <button type="button" command="close" commandfor="drawerMobile"
+                                class="relative -m-2 p-2 text-gray-400 hover:text-gray-500">
+                                <span class="absolute -inset-0.5"></span>
+                                <span class="sr-only">Close panel</span>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                  data-slot="icon" aria-hidden="true" class="size-6">
+                                  <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                              </button>
+                            </div>
+                          </div>
+
+                          <div class="mt-8">
+                            <div class="flow-root">
+                              <ul role="list" class="-my-6 divide-y divide-gray-200">
+                                <li class="flex py-6">
+                                  <div class="size-24 shrink-0 overflow-hidden rounded-md border border-gray-200">
+                                    <img
+                                      src="https://tailwindcss.com/plus-assets/img/ecommerce-images/shopping-cart-page-04-product-01.jpg"
+                                      alt="Salmon orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt."
+                                      class="size-full object-cover" />
+                                  </div>
+
+                                  <div class="ml-4 flex flex-1 flex-col">
+                                    <div>
+                                      <div class="flex justify-between text-base font-medium text-gray-900">
+                                        <h3>
+                                          <a href="#">Throwback Hip Bag</a>
+                                        </h3>
+                                        <p class="ml-4">$90.00</p>
+                                      </div>
+                                      <p class="mt-1 text-sm text-gray-500">Salmon</p>
+                                    </div>
+                                    <div class="flex flex-1 items-end justify-between text-sm">
+                                      <p class="text-gray-500">Qty 1</p>
+
+                                      <div class="flex">
+                                        <button type="button"
+                                          class="font-medium text-indigo-600 hover:text-indigo-500">Remove</button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="border-t border-gray-200 px-4 py-6 sm:px-6">
+                          <div class="flex justify-between text-base font-medium text-gray-900">
+                            <p>Subtotal</p>
+                            <p>$262.00</p>
+                          </div>
+                          <p class="mt-0.5 text-sm text-gray-500">Shipping and taxes calculated at checkout.</p>
+                          <div class="mt-6">
+                            <a href="#"
+                              class="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700">Checkout</a>
+                          </div>
+                          <div class="mt-6 flex justify-center text-center text-sm text-gray-500">
+                            <p>
+                              or
+                              <button type="button" command="close" commandfor="drawerMobile"
+                                class="font-medium text-indigo-600 hover:text-indigo-500">
+                                Continue Shopping
+                                <span aria-hidden="true"> &rarr;</span>
+                              </button>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </el-dialog-panel>
+                  </div>
+                </dialog>
+              </el-dialog>
+
+            </div>
+            <div class="lg:hidden">
+              <button class="relative w-10 h-10 btn-icon btn-light-primary px-1 hover:bg-light-100"
+                data-dropdown-toggle="NotificationsDropdownMobile" data-dropdown-placement="bottom-start"
+                id="NotificationsButton">
                 <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M6.03985 17H11.9558C11.8376 17.699 11.4757 18.3335 10.9342 18.7911C10.3928 19.2487 9.70677 19.4998 8.99785 19.4998C8.28893 19.4998 7.60291 19.2487 7.06145 18.7911C6.51998 18.3335 6.15805 17.699 6.03985 17ZM8.99785 0C10.987 0 12.8946 0.790176 14.3011 2.1967C15.7077 3.60322 16.4978 5.51088 16.4978 7.5V11.5L17.9158 14.66C17.9803 14.8045 18.0077 14.9629 17.9954 15.1206C17.9831 15.2784 17.9316 15.4306 17.8456 15.5635C17.7596 15.6963 17.6417 15.8055 17.5027 15.8812C17.3638 15.9569 17.2081 15.9967 17.0498 15.997H0.949846C0.791378 15.997 0.635434 15.9573 0.496213 15.8816C0.356993 15.8059 0.238919 15.6966 0.152745 15.5636C0.0665699 15.4306 0.0150319 15.2782 0.00282358 15.1202C-0.00938473 14.9622 0.0181246 14.8036 0.0828464 14.659L1.49785 11.499V7.487L1.50285 7.237C1.57125 5.29485 2.39084 3.45508 3.78895 2.10529C5.18705 0.755502 7.05449 9.12495e-05 8.99785 0Z"
@@ -461,7 +806,118 @@
                 </svg>
                 <span
                   class="absolute top-[10px] left-[20px] transform -translate-y-1/2 w-3 h-3 bg-[#FF3D00] rounded-full"></span>
-              </a>
+              </button>
+
+              <div id="NotificationsDropdownMobile"
+                class="z-10 hidden bg-white border border-default-medium rounded-lg shadow-lg w-auto px-3 h-96 overflow-auto">
+                <ul role="list" class="divide-y divide-gray-100">
+                  <li class="flex justify-between gap-x-6 py-5">
+                    <div class="flex min-w-0 gap-x-4">
+                      <img
+                        src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                        alt="" class="size-12 flex-none rounded-full bg-gray-50" />
+                      <div class="min-w-0 flex-auto">
+                        <p class="text-sm/6 font-semibold text-gray-900">Leslie Alexander</p>
+                        <p class="mt-1 truncate text-xs/5 text-gray-500">leslie.alexander@example.com</p>
+                      </div>
+                    </div>
+                    <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
+                      <p class="text-sm/6 text-gray-900">Co-Founder / CEO</p>
+                      <p class="mt-1 text-xs/5 text-gray-500">Last seen <time datetime="2023-01-23T13:23Z">3h ago</time>
+                      </p>
+                    </div>
+                  </li>
+                  <li class="flex justify-between gap-x-6 py-5">
+                    <div class="flex min-w-0 gap-x-4">
+                      <img
+                        src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                        alt="" class="size-12 flex-none rounded-full bg-gray-50" />
+                      <div class="min-w-0 flex-auto">
+                        <p class="text-sm/6 font-semibold text-gray-900">Michael Foster</p>
+                        <p class="mt-1 truncate text-xs/5 text-gray-500">michael.foster@example.com</p>
+                      </div>
+                    </div>
+                    <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
+                      <p class="text-sm/6 text-gray-900">Co-Founder / CTO</p>
+                      <p class="mt-1 text-xs/5 text-gray-500">Last seen <time datetime="2023-01-23T13:23Z">3h ago</time>
+                      </p>
+                    </div>
+                  </li>
+                  <li class="flex justify-between gap-x-6 py-5">
+                    <div class="flex min-w-0 gap-x-4">
+                      <img
+                        src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                        alt="" class="size-12 flex-none rounded-full bg-gray-50" />
+                      <div class="min-w-0 flex-auto">
+                        <p class="text-sm/6 font-semibold text-gray-900">Dries Vincent</p>
+                        <p class="mt-1 truncate text-xs/5 text-gray-500">dries.vincent@example.com</p>
+                      </div>
+                    </div>
+                    <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
+                      <p class="text-sm/6 text-gray-900">Business Relations</p>
+                      <div class="mt-1 flex items-center gap-x-1.5">
+                        <div class="flex-none rounded-full bg-emerald-500/20 p-1">
+                          <div class="size-1.5 rounded-full bg-emerald-500"></div>
+                        </div>
+                        <p class="text-xs/5 text-gray-500">Online</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="flex justify-between gap-x-6 py-5">
+                    <div class="flex min-w-0 gap-x-4">
+                      <img
+                        src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                        alt="" class="size-12 flex-none rounded-full bg-gray-50" />
+                      <div class="min-w-0 flex-auto">
+                        <p class="text-sm/6 font-semibold text-gray-900">Lindsay Walton</p>
+                        <p class="mt-1 truncate text-xs/5 text-gray-500">lindsay.walton@example.com</p>
+                      </div>
+                    </div>
+                    <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
+                      <p class="text-sm/6 text-gray-900">Front-end Developer</p>
+                      <p class="mt-1 text-xs/5 text-gray-500">Last seen <time datetime="2023-01-23T13:23Z">3h ago</time>
+                      </p>
+                    </div>
+                  </li>
+                  <li class="flex justify-between gap-x-6 py-5">
+                    <div class="flex min-w-0 gap-x-4">
+                      <img
+                        src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                        alt="" class="size-12 flex-none rounded-full bg-gray-50" />
+                      <div class="min-w-0 flex-auto">
+                        <p class="text-sm/6 font-semibold text-gray-900">Courtney Henry</p>
+                        <p class="mt-1 truncate text-xs/5 text-gray-500">courtney.henry@example.com</p>
+                      </div>
+                    </div>
+                    <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
+                      <p class="text-sm/6 text-gray-900">Designer</p>
+                      <p class="mt-1 text-xs/5 text-gray-500">Last seen <time datetime="2023-01-23T13:23Z">3h ago</time>
+                      </p>
+                    </div>
+                  </li>
+                  <li class="flex justify-between gap-x-6 py-5">
+                    <div class="flex min-w-0 gap-x-4">
+                      <img
+                        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                        alt="" class="size-12 flex-none rounded-full bg-gray-50" />
+                      <div class="min-w-0 flex-auto">
+                        <p class="text-sm/6 font-semibold text-gray-900">Tom Cook</p>
+                        <p class="mt-1 truncate text-xs/5 text-gray-500">tom.cook@example.com</p>
+                      </div>
+                    </div>
+                    <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
+                      <p class="text-sm/6 text-gray-900">Director of Product</p>
+                      <div class="mt-1 flex items-center gap-x-1.5">
+                        <div class="flex-none rounded-full bg-emerald-500/20 p-1">
+                          <div class="size-1.5 rounded-full bg-emerald-500"></div>
+                        </div>
+                        <p class="text-xs/5 text-gray-500">Online</p>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+
+              </div>
             </div>
             <div class="lg:hidden">
               <button data-modal-target="default-modal" data-modal-toggle="default-modal"
@@ -644,7 +1100,47 @@
                 Programs</a>
             </div>
           </div>
-
+        </div>
+        <!-- Switch Lang button -->
+        <div>
+          <button class="w-10 h-10 btn-icon btn-light-primary px-1 hover:bg-light-100"
+            data-dropdown-toggle="langMDropdown" data-dropdown-placement="bottom-start" id="langMButton">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M12 22C17.523 22 22 17.523 22 12C22 6.477 17.523 2 12 2C6.477 2 2 6.477 2 12C2 17.523 6.477 22 12 22Z"
+                class="stroke-primary-500" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M2 12H22" class="stroke-primary-500" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path
+                d="M12 22C14.209 22 16 17.523 16 12C16 6.477 14.209 2 12 2C9.791 2 8 6.477 8 12C8 17.523 9.791 22 12 22Z"
+                class="stroke-primary-500" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              <path
+                d="M4.92896 5.071C5.85654 6.00092 6.95873 6.73839 8.1722 7.24104C9.38567 7.74369 10.6865 8.00162 12 8C13.3134 8.00162 14.6142 7.74369 15.8277 7.24104C17.0412 6.73839 18.1434 6.00092 19.071 5.071M19.071 18.929C18.1434 17.9991 17.0412 17.2616 15.8277 16.759C14.6142 16.2563 13.3134 15.9984 12 16C10.6865 15.9984 9.38567 16.2563 8.1722 16.759C6.95873 17.2616 5.85654 17.9991 4.92896 18.929"
+                class="stroke-primary-500" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+          <div id="langMDropdown" class="z-10 hidden bg-white border border-default-medium rounded-lg shadow-lg w-auto">
+            <ul class="p-2 text-sm text-body font-medium" aria-labelledby="langMButton">
+              <li>
+                <a href="#"
+                  class="flex items-center w-full gap-2 p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded-md">
+                  <img src="images/ar.svg" class="w-4 h-4" alt="Arabic">
+                  Arabic</a>
+              </li>
+              <li>
+                <a href="#"
+                  class="flex items-center w-full gap-2 p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded-md">
+                  <img src="images/en.svg" class="w-4 h-4" alt="Arabic">
+                  English</a>
+              </li>
+              <li>
+                <a href="#"
+                  class="flex items-center w-full gap-2 p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded-md">
+                  <img src="images/turkey.svg" class="w-4 h-4" alt="Arabic">
+                  turkey</a>
+              </li>
+            </ul>
+          </div>
         </div>
 
         <!-- Login/Signup Buttons -->
@@ -652,6 +1148,7 @@
           <button class="w-full btn btn-light-primary">Login</button>
           <button class="w-full btn btn-primary">Sign Up</button>
         </div>
+
 
         <div>
           <div class="flex items-center gap-1.5  rounded-full cursor-pointer" data-dropdown-toggle="userDropdownMobile"
@@ -661,12 +1158,23 @@
             <div class="font-medium text-heading">
               <div>Jese Leos</div>
             </div>
+            <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+              fill="none" viewBox="0 0 24 24">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="m19 9-7 7-7-7" />
+            </svg>
           </div>
           <div id="userDropdownMobile"
-            class="z-10 hidden bg-white border border-default-medium rounded-lg shadow-lg w-44">
+            class="z-10 hidden bg-white border border-default-medium rounded-lg shadow-lg w-52">
             <div class="px-4 py-3 border-b border-default-medium text-sm text-heading">
-              <div class="font-medium">Jese Leos</div>
-              <div class="truncate">name@flowbite.com</div>
+              <div class="flex item-center gap-2">
+                <img class="w-10 h-10 rounded-lg" src="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
+                  alt="">
+                <div>
+                  <div class="font-medium">Jese Leos</div>
+                  <div class="truncate">name@flowbite.com</div>
+                </div>
+              </div>
             </div>
             <ul class="p-2 text-sm text-body font-medium" aria-labelledby="avatarButton">
               <li>
@@ -686,7 +1194,6 @@
   </header>
 
   <main class="space-y-8 mb-16">
-
     <section class="container mt-6">
       <div class="hero">
         <div id="carousel-heroS" class="relative w-full" data-carousel="slide">
@@ -790,7 +1297,8 @@
     <section class="container">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         <!-- Card 1: Launch a new career -->
-        <a href="" data-aos="zoom-in-up" class="towSection flex items-center justify-between hover:shadow-lg transition-shadow duration-300">
+        <a href="" data-aos="zoom-in-up"
+          class="towSection flex items-center justify-between hover:shadow-lg transition-shadow duration-300">
           <h3 class="text-lg font-semibold text-gray-800">Launch a new career</h3>
           <div class="relative">
             <img src="images/book.png" class="w-[140px] opacity-60" alt="" />
@@ -800,7 +1308,8 @@
         </a>
 
         <!-- Card 2: Gain in-demand skills -->
-        <a href="" data-aos="zoom-in-up" class="towSection flex items-center justify-between hover:shadow-lg transition-shadow duration-300">
+        <a href="" data-aos="zoom-in-up"
+          class="towSection flex items-center justify-between hover:shadow-lg transition-shadow duration-300">
           <h3 class="text-lg font-semibold text-gray-800">Gain in-demand skills</h3>
           <div class="relative">
             <img src="images/book.png" class="w-[140px] opacity-60" alt="" />
@@ -810,7 +1319,8 @@
         </a>
 
         <!-- Card 3: Earn a degree -->
-        <a href="" data-aos="zoom-in-up" class="towSection flex items-center justify-between hover:shadow-lg transition-shadow duration-300">
+        <a href="" data-aos="zoom-in-up"
+          class="towSection flex items-center justify-between hover:shadow-lg transition-shadow duration-300">
           <h3 class="text-lg font-semibold text-gray-800">Earn a degree</h3>
           <div class="relative">
             <img src="images/book.png" class="w-[140px] opacity-60" alt="" />
@@ -968,7 +1478,8 @@
         Trending courses
       </h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        <div data-aos="flip-left"data-aos-easing="ease-out-cubic"data-aos-duration="1000" class="bg-primary-200 rounded-xl p-4">
+        <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="1000"
+          class="bg-primary-200 rounded-xl p-4">
           <a href="" class="flex items-center gap-2 font-semibold">Most popular <svg width="13" height="13"
               viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M6.90625 11.125L11.9688 6.0625L6.90625 1M11.2656 6.0625H1" stroke="black" stroke-width="2"
@@ -1078,7 +1589,8 @@
             </div>
           </a>
         </div>
-        <div data-aos="flip-left"data-aos-easing="ease-out-cubic"data-aos-duration="1000" class="bg-primary-200 rounded-xl p-4">
+        <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="1000"
+          class="bg-primary-200 rounded-xl p-4">
           <a href="" class="flex items-center gap-2 font-semibold">Weekly spotlight <svg width="13" height="13"
               viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M6.90625 11.125L11.9688 6.0625L6.90625 1M11.2656 6.0625H1" stroke="black" stroke-width="2"
@@ -1188,7 +1700,8 @@
             </div>
           </a>
         </div>
-        <div data-aos="flip-left"data-aos-easing="ease-out-cubic"data-aos-duration="1000" class="bg-primary-200 rounded-xl p-4">
+        <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="1000"
+          class="bg-primary-200 rounded-xl p-4">
           <a href="" class="flex items-center gap-2 font-semibold">In-demand AI skills <svg width="13" height="13"
               viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M6.90625 11.125L11.9688 6.0625L6.90625 1M11.2656 6.0625H1" stroke="black" stroke-width="2"
@@ -1305,7 +1818,7 @@
       <h2 class="text-2xl font-semibold mb-4 text-start" data-aos="fade-up">
         Explore categories
       </h2>
-      <div class="flex flex-wrap gap-3 "  data-aos="zoom-in">
+      <div class="flex flex-wrap gap-3 " data-aos="zoom-in">
         <a href=""
           class="inline-flex items-center bg-primary-300 whitespace-nowrap text-heading text-sm font-medium leading-none px-2.5 py-1.5 gap-1 rounded-full">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1431,7 +1944,7 @@
       </div>
     </section>
 
-    <section class="container"  data-aos="zoom-out">
+    <section class="container" data-aos="zoom-out">
       <div class="gradient-section">
         <div class="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-5 items-center gap-3">
           <div>
@@ -1575,7 +2088,7 @@
       </div>
     </section>
 
-    <section class="container" >
+    <section class="container">
       <div class="flex items-center  mb-4 " data-aos="fade-up">
         <h2 class="text-2xl font-semibold text-start">Explore careers</h2>
         <a href="" class="px-3 flex items-center gap-1  text-primary-500">explore all <svg width="18" height="18"
@@ -1619,7 +2132,7 @@
       </div>
     </section>
 
-    <section class="container"  data-aos="fade-up">
+    <section class="container" data-aos="fade-up">
       <div class="bg-primary-300 rounded-xl p-5 lg:p-8">
         <div class="flex flex-col lg:flex-row items-start lg:items-center gap-4 justify-between">
 
@@ -1818,12 +2331,13 @@
       </div>
     </section>
 
-  <section class="container">
+    <section class="container">
       <h2 class="text-2xl font-semibold mb-4 text-start" data-aos="zoom-in">
         Trending courses
       </h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        <div data-aos="flip-left"data-aos-easing="ease-out-cubic"data-aos-duration="1000" class="bg-primary-200 rounded-xl p-4">
+        <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="1000"
+          class="bg-primary-200 rounded-xl p-4">
           <a href="" class="flex items-center gap-2 font-semibold">Most popular <svg width="13" height="13"
               viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M6.90625 11.125L11.9688 6.0625L6.90625 1M11.2656 6.0625H1" stroke="black" stroke-width="2"
@@ -1933,7 +2447,8 @@
             </div>
           </a>
         </div>
-        <div data-aos="flip-left"data-aos-easing="ease-out-cubic"data-aos-duration="1000" class="bg-primary-200 rounded-xl p-4">
+        <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="1000"
+          class="bg-primary-200 rounded-xl p-4">
           <a href="" class="flex items-center gap-2 font-semibold">Weekly spotlight <svg width="13" height="13"
               viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M6.90625 11.125L11.9688 6.0625L6.90625 1M11.2656 6.0625H1" stroke="black" stroke-width="2"
@@ -2043,7 +2558,8 @@
             </div>
           </a>
         </div>
-        <div data-aos="flip-left"data-aos-easing="ease-out-cubic"data-aos-duration="1000" class="bg-primary-200 rounded-xl p-4">
+        <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="1000"
+          class="bg-primary-200 rounded-xl p-4">
           <a href="" class="flex items-center gap-2 font-semibold">In-demand AI skills <svg width="13" height="13"
               viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M6.90625 11.125L11.9688 6.0625L6.90625 1M11.2656 6.0625H1" stroke="black" stroke-width="2"
@@ -2208,7 +2724,7 @@
       </div>
     </section>
 
-    <section class="container" >
+    <section class="container">
       <h2 class="text-2xl font-semibold mb-4 text-start" data-aos="zoom-in">
         Why people choose Coursera
       </h2>
@@ -2269,7 +2785,7 @@
     </section>
 
     <section class="container">
-      <h2 class="text-2xl font-semibold mb-4 text-start"  data-aos="zoom-in">
+      <h2 class="text-2xl font-semibold mb-4 text-start" data-aos="zoom-in">
         Frequently asked questions
       </h2>
       <div id="accordion-card" class="space-y-3" data-accordion="collapse">
@@ -2666,7 +3182,7 @@
 
   <!-- search moble modal -->
   <div id="default-modal" tabindex="-1" aria-hidden="true"
-    class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+    class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(80%-1rem)] max-h-full">
     <div class="relative">
       <button type="button"
         class="text-white bg-transparent hover:bg-neutral-tertiary hover:text-heading rounded-base text-xl w-15 h-15 ms-auto inline-flex justify-center items-center"
@@ -2791,6 +3307,115 @@
     </div>
   </div>
 
+
+ <!-- Cookie Modal - Simple & Clean -->
+<div id="cookie-modal" class="fixed bottom-0 left-0 right-0 z-50 p-4 transform translate-y-0 transition-transform duration-500">
+    <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-200">
+        <div class="flex flex-col md:flex-row items-center gap-6 p-6">
+            <!-- Content -->
+            <div class="flex-1 text-center md:text-left">
+                <h3 class="text-2xl font-bold text-gray-800 mb-2">
+                    We use cookies
+                </h3>
+                <p class="text-gray-600 leading-relaxed text-sm">
+                    We use cookies to improve your browsing experience, personalize content, and analyze our traffic. 
+                    By clicking "Accept All", you consent to our use of cookies.
+                    <a href="#" class="text-primary-500 hover:underline font-semibold ml-1">Learn more</a>
+                </p>
+            </div>
+
+            <!-- Buttons -->
+            <div class="flex flex-col sm:flex-row gap-3 flex-shrink-0">
+                <button onclick="acceptCookies()" class="bg-primary-500 hover:bg-primary-600 text-white font-semibold px-8 py-3 rounded-xl shadow-lg transition-all hover:shadow-xl whitespace-nowrap">
+                    Accept All
+                </button>
+                <button onclick="rejectCookies()" class="bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold px-8 py-3 rounded-xl transition-colors whitespace-nowrap">
+                    Reject
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+// Show cookie modal on page load
+window.addEventListener('load', function() {
+    // Check if user has already accepted/rejected cookies
+    if (!localStorage.getItem('cookiesAccepted')) {
+        setTimeout(showCookieModal, 1000); // Show after 1 second
+    }
+});
+
+// Show cookie modal
+function showCookieModal() {
+    const modal = document.getElementById('cookie-modal');
+    modal.classList.remove('hidden');
+}
+
+// Accept all cookies
+function acceptCookies() {
+    localStorage.setItem('cookiesAccepted', 'true');
+    localStorage.setItem('cookiePreference', 'accepted');
+    
+    hideCookieModal();
+    showNotification('Cookies accepted successfully!', 'success');
+    
+    // Here you can add your cookie/analytics initialization
+    console.log('✅ Cookies accepted - Initialize analytics here');
+}
+
+// Reject cookies
+function rejectCookies() {
+    localStorage.setItem('cookiesAccepted', 'false');
+    localStorage.setItem('cookiePreference', 'rejected');
+    
+    hideCookieModal();
+    showNotification('Cookie preferences saved', 'info');
+    
+    console.log('❌ Cookies rejected - Only essential cookies will be used');
+}
+
+// Hide cookie modal
+function hideCookieModal() {
+    const modal = document.getElementById('cookie-modal');
+    modal.style.transform = 'translateY(100%)';
+    setTimeout(() => {
+        modal.classList.add('hidden');
+        modal.style.transform = 'translateY(0)';
+    }, 500);
+}
+
+// Show notification
+function showNotification(message, type = 'success') {
+    const bgColor = type === 'success' ? 'bg-green-500' : 'bg-blue-500';
+    
+    const notification = document.createElement('div');
+    notification.className = `fixed top-4 right-4 ${bgColor} text-white px-6 py-4 rounded-xl shadow-lg z-50 animate-slideIn`;
+    notification.innerHTML = `
+        <div class="flex items-center gap-3">
+            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none">
+                <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="font-semibold">${message}</span>
+        </div>
+    `;
+    document.body.appendChild(notification);
+    
+    setTimeout(() => {
+        notification.style.opacity = '0';
+        setTimeout(() => notification.remove(), 300);
+    }, 3000);
+}
+
+// Reset cookies (for testing - remove in production)
+function resetCookieConsent() {
+    localStorage.removeItem('cookiesAccepted');
+    localStorage.removeItem('cookiePreference');
+    location.reload();
+}
+</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
   <script src="js/flowbite.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>

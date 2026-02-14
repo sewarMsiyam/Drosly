@@ -749,7 +749,7 @@
     </header>
 
     <main class="space-y-8 mb-16">
-        <section class="container mt-6" data-aos="fade-up">
+        <section class="container mt-6 relative z-[5]" data-aos="fade-up">
             <div class="flex flex-wrap items-center gap-5 mb-5">
                 <button data-drawer-target="drawer-filters" data-drawer-show="drawer-filters"
                     data-drawer-placement="left" aria-controls="drawer-filters" type="button"
@@ -794,8 +794,6 @@
                         Clear All
                     </button>
                 </div>
-
-
             </div>
             <div class="flex flex-wrap items-center gap-3">
                 <!-- Language Dropdown -->
@@ -814,7 +812,7 @@
 
                     <!-- Language Dropdown Menu -->
                     <div id="languageDropdown"
-                        class="z-100 hidden bg-white rounded-lg shadow-lg w-auto border border-gray-200">
+                        class="hidden bg-white rounded-lg shadow-lg w-auto border border-gray-200">
                         <ul class="p-3 space-y-2 text-sm max-h-64 overflow-y-auto custom-scrollbar">
                             <li>
                                 <div class="flex items-center justify-between gap-10 p-2 rounded hover:bg-primary-50">
@@ -879,7 +877,7 @@
 
                     <!-- Ratings Dropdown Menu -->
                     <div id="ratingsDropdown"
-                        class="z-100 hidden bg-white rounded-lg shadow-lg w-auto border border-gray-200">
+                        class="hidden bg-white rounded-lg shadow-lg w-auto border border-gray-200">
                         <ul class="p-3 space-y-2 text-sm">
                             <li>
                                 <div class="flex items-center justify-between gap-10 p-2 rounded hover:bg-primary-50">
@@ -1246,7 +1244,7 @@
             </div>
         </section>
 
-        <section class="container mt-6">
+        <section class="container mt-6 relative z-[1]">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div data-aos="zoom-in"
                     class="group relative border-2 border-primary-100 hover:border-primary-500 rounded-xl transition-all duration-300 flex flex-col ">
@@ -1276,14 +1274,13 @@
                                         fill="currentColor" />
                                 </svg>
                             </button>
-                            <button class="bg-white p-2 rounded-lg shadow-lg hover:bg-gray-50 transition-colors">
+                            <button onclick="toggleCourse('course-1', this)" class="bg-white p-2 rounded-lg shadow-lg hover:bg-gray-50 transition-colors">
                                 <svg class="w-5 h-5 text-primary-800" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M12 4V1L8 5L12 9V6C15.31 6 18 8.69 18 12C18 13.01 17.75 13.97 17.3 14.8L18.76 16.26C19.5702 14.9869 20.0004 13.5091 20 12C20 7.58 16.42 4 12 4ZM12 18C8.69 18 6 15.31 6 12C6 10.99 6.25 10.03 6.7 9.2L5.24 7.74C4.42975 9.01309 3.99958 10.4909 4 12C4 16.42 7.58 20 12 20V23L16 19L12 15V18Z"
                                         fill="currentColor" />
                                 </svg>
-
                             </button>
                         </div>
 
@@ -1375,14 +1372,13 @@
                                         fill="currentColor" />
                                 </svg>
                             </button>
-                            <button class="bg-white p-2 rounded-lg shadow-lg hover:bg-gray-50 transition-colors">
+                            <button onclick="toggleCourse('course-2', this)" class="bg-white p-2 rounded-lg shadow-lg hover:bg-gray-50 transition-colors">
                                 <svg class="w-5 h-5 text-primary-800" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M12 4V1L8 5L12 9V6C15.31 6 18 8.69 18 12C18 13.01 17.75 13.97 17.3 14.8L18.76 16.26C19.5702 14.9869 20.0004 13.5091 20 12C20 7.58 16.42 4 12 4ZM12 18C8.69 18 6 15.31 6 12C6 10.99 6.25 10.03 6.7 9.2L5.24 7.74C4.42975 9.01309 3.99958 10.4909 4 12C4 16.42 7.58 20 12 20V23L16 19L12 15V18Z"
                                         fill="currentColor" />
                                 </svg>
-
                             </button>
                         </div>
 
@@ -1473,14 +1469,13 @@
                                         fill="currentColor" />
                                 </svg>
                             </button>
-                            <button class="bg-white p-2 rounded-lg shadow-lg hover:bg-gray-50 transition-colors">
+                            <button  onclick="toggleCourse('course-3', this)" class="bg-white p-2 rounded-lg shadow-lg hover:bg-gray-50 transition-colors">
                                 <svg class="w-5 h-5 text-primary-800" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M12 4V1L8 5L12 9V6C15.31 6 18 8.69 18 12C18 13.01 17.75 13.97 17.3 14.8L18.76 16.26C19.5702 14.9869 20.0004 13.5091 20 12C20 7.58 16.42 4 12 4ZM12 18C8.69 18 6 15.31 6 12C6 10.99 6.25 10.03 6.7 9.2L5.24 7.74C4.42975 9.01309 3.99958 10.4909 4 12C4 16.42 7.58 20 12 20V23L16 19L12 15V18Z"
                                         fill="currentColor" />
                                 </svg>
-
                             </button>
                         </div>
 
@@ -1571,7 +1566,7 @@
                                         fill="currentColor" />
                                 </svg>
                             </button>
-                            <button class="bg-white p-2 rounded-lg shadow-lg hover:bg-gray-50 transition-colors">
+                            <button  onclick="toggleCourse('course-4', this)" class="bg-white p-2 rounded-lg shadow-lg hover:bg-gray-50 transition-colors">
                                 <svg class="w-5 h-5 text-primary-800" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -1685,6 +1680,7 @@
         </section>
     </main>
 
+    <!-- Drawer all filters Content -->
     <div id="drawer-filters"
         class="fixed top-0 left-0 z-40 h-screen p-4 ps-7 overflow-y-auto overflow-x-visible transition-transform -translate-x-full bg-white w-80 mt-0"
         tabindex="-1" aria-labelledby="drawer-filters-label">
@@ -1703,7 +1699,7 @@
             </button>
         </div>
 
-        <!-- Drawer Content -->
+        <!-- Drawer all filters Content -->
         <div class="space-y-4">
 
             <!-- Select All & Reset -->
@@ -1724,42 +1720,42 @@
             <div>
                 <h4 class="text-sm font-semibold text-gray-900 mb-3">Current Selection</h4>
                 <div class="flex flex-wrap gap-2">
-                    <span
+                    <div
                         class="inline-flex items-center px-4 py-1.5 rounded-full text-sm font-medium bg-primary-300 text-primary-800 border border-primary-800">
-                        <span class="bg-primary-800 me-2 rounded-full p-1">
+                        <button class="bg-primary-800 me-2 rounded-full p-1">
                             <svg width="10" height="10" viewBox="0 0 14 14" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd"
                                     d="M7.00042 8.23784L10.0938 11.3313C10.258 11.4954 10.4806 11.5876 10.7128 11.5876C10.9449 11.5876 11.1675 11.4954 11.3317 11.3313C11.4958 11.1671 11.588 10.9445 11.588 10.7123C11.588 10.4802 11.4958 10.2576 11.3317 10.0934L8.23709 7L11.3311 3.90659C11.4123 3.82531 11.4768 3.72883 11.5207 3.62265C11.5647 3.51647 11.5873 3.40267 11.5872 3.28776C11.5872 3.17284 11.5646 3.05905 11.5206 2.95289C11.4766 2.84674 11.4121 2.75028 11.3308 2.66904C11.2495 2.58781 11.153 2.52337 11.0469 2.47942C10.9407 2.43547 10.8269 2.41286 10.712 2.41289C10.597 2.41291 10.4833 2.43558 10.3771 2.47958C10.2709 2.52358 10.1745 2.58806 10.0933 2.66934L7.00042 5.76275L3.907 2.66934C3.82633 2.58573 3.72981 2.51902 3.62307 2.47312C3.51634 2.42721 3.40154 2.40302 3.28536 2.40195C3.16918 2.40089 3.05395 2.42297 2.94639 2.46692C2.83884 2.51086 2.74111 2.57579 2.65892 2.65791C2.57672 2.74002 2.51171 2.83769 2.46766 2.9452C2.42361 3.05271 2.40142 3.16792 2.40237 3.2841C2.40333 3.40029 2.42741 3.51511 2.47322 3.62189C2.51902 3.72866 2.58564 3.82525 2.66917 3.906L5.76375 7L2.66975 10.094C2.58622 10.1748 2.51961 10.2713 2.4738 10.3781C2.42799 10.4849 2.40391 10.5997 2.40296 10.7159C2.402 10.8321 2.4242 10.9473 2.46824 11.0548C2.51229 11.1623 2.57731 11.26 2.6595 11.3421C2.74169 11.4242 2.83942 11.4891 2.94697 11.5331C3.05453 11.577 3.16976 11.5991 3.28594 11.5981C3.40212 11.597 3.51693 11.5728 3.62366 11.5269C3.73039 11.481 3.82691 11.4143 3.90759 11.3307L7.00042 8.23784Z"
                                     fill="white" />
                             </svg>
-                        </span>
+                        </button>
                         English
-                    </span>
-                    <span
+                    </div>
+                    <div
                         class="inline-flex items-center px-4 py-1.5 rounded-full text-sm font-medium bg-primary-300 text-primary-800 border border-primary-800">
-                        <span class="bg-primary-800 me-2 rounded-full p-1">
+                        <button class="bg-primary-800 me-2 rounded-full p-1">
                             <svg width="10" height="10" viewBox="0 0 14 14" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd"
                                     d="M7.00042 8.23784L10.0938 11.3313C10.258 11.4954 10.4806 11.5876 10.7128 11.5876C10.9449 11.5876 11.1675 11.4954 11.3317 11.3313C11.4958 11.1671 11.588 10.9445 11.588 10.7123C11.588 10.4802 11.4958 10.2576 11.3317 10.0934L8.23709 7L11.3311 3.90659C11.4123 3.82531 11.4768 3.72883 11.5207 3.62265C11.5647 3.51647 11.5873 3.40267 11.5872 3.28776C11.5872 3.17284 11.5646 3.05905 11.5206 2.95289C11.4766 2.84674 11.4121 2.75028 11.3308 2.66904C11.2495 2.58781 11.153 2.52337 11.0469 2.47942C10.9407 2.43547 10.8269 2.41286 10.712 2.41289C10.597 2.41291 10.4833 2.43558 10.3771 2.47958C10.2709 2.52358 10.1745 2.58806 10.0933 2.66934L7.00042 5.76275L3.907 2.66934C3.82633 2.58573 3.72981 2.51902 3.62307 2.47312C3.51634 2.42721 3.40154 2.40302 3.28536 2.40195C3.16918 2.40089 3.05395 2.42297 2.94639 2.46692C2.83884 2.51086 2.74111 2.57579 2.65892 2.65791C2.57672 2.74002 2.51171 2.83769 2.46766 2.9452C2.42361 3.05271 2.40142 3.16792 2.40237 3.2841C2.40333 3.40029 2.42741 3.51511 2.47322 3.62189C2.51902 3.72866 2.58564 3.82525 2.66917 3.906L5.76375 7L2.66975 10.094C2.58622 10.1748 2.51961 10.2713 2.4738 10.3781C2.42799 10.4849 2.40391 10.5997 2.40296 10.7159C2.402 10.8321 2.4242 10.9473 2.46824 11.0548C2.51229 11.1623 2.57731 11.26 2.6595 11.3421C2.74169 11.4242 2.83942 11.4891 2.94697 11.5331C3.05453 11.577 3.16976 11.5991 3.28594 11.5981C3.40212 11.597 3.51693 11.5728 3.62366 11.5269C3.73039 11.481 3.82691 11.4143 3.90759 11.3307L7.00042 8.23784Z"
                                     fill="white" />
                             </svg>
-                        </span>
+                        </button>
                         Beginner
-                    </span>
-                    <span
+                    </div>
+                    <div
                         class="inline-flex items-center px-4 py-1.5 rounded-full text-sm font-medium bg-primary-300 text-primary-800 border border-primary-800">
-                        <span class="bg-primary-800 me-2 rounded-full p-1">
+                        <button class="bg-primary-800 me-2 rounded-full p-1">
                             <svg width="10" height="10" viewBox="0 0 14 14" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd"
                                     d="M7.00042 8.23784L10.0938 11.3313C10.258 11.4954 10.4806 11.5876 10.7128 11.5876C10.9449 11.5876 11.1675 11.4954 11.3317 11.3313C11.4958 11.1671 11.588 10.9445 11.588 10.7123C11.588 10.4802 11.4958 10.2576 11.3317 10.0934L8.23709 7L11.3311 3.90659C11.4123 3.82531 11.4768 3.72883 11.5207 3.62265C11.5647 3.51647 11.5873 3.40267 11.5872 3.28776C11.5872 3.17284 11.5646 3.05905 11.5206 2.95289C11.4766 2.84674 11.4121 2.75028 11.3308 2.66904C11.2495 2.58781 11.153 2.52337 11.0469 2.47942C10.9407 2.43547 10.8269 2.41286 10.712 2.41289C10.597 2.41291 10.4833 2.43558 10.3771 2.47958C10.2709 2.52358 10.1745 2.58806 10.0933 2.66934L7.00042 5.76275L3.907 2.66934C3.82633 2.58573 3.72981 2.51902 3.62307 2.47312C3.51634 2.42721 3.40154 2.40302 3.28536 2.40195C3.16918 2.40089 3.05395 2.42297 2.94639 2.46692C2.83884 2.51086 2.74111 2.57579 2.65892 2.65791C2.57672 2.74002 2.51171 2.83769 2.46766 2.9452C2.42361 3.05271 2.40142 3.16792 2.40237 3.2841C2.40333 3.40029 2.42741 3.51511 2.47322 3.62189C2.51902 3.72866 2.58564 3.82525 2.66917 3.906L5.76375 7L2.66975 10.094C2.58622 10.1748 2.51961 10.2713 2.4738 10.3781C2.42799 10.4849 2.40391 10.5997 2.40296 10.7159C2.402 10.8321 2.4242 10.9473 2.46824 11.0548C2.51229 11.1623 2.57731 11.26 2.6595 11.3421C2.74169 11.4242 2.83942 11.4891 2.94697 11.5331C3.05453 11.577 3.16976 11.5991 3.28594 11.5981C3.40212 11.597 3.51693 11.5728 3.62366 11.5269C3.73039 11.481 3.82691 11.4143 3.90759 11.3307L7.00042 8.23784Z"
                                     fill="white" />
                             </svg>
-                        </span>
+                        </button>
                         Expert
-                    </span>
+                    </div>
                 </div>
                 <button class="text-red-600 hover:text-red-700 underline text-sm font-medium mt-3">Clear All</button>
             </div>
@@ -2284,6 +2280,430 @@
         </div>
     </div>
 
+
+
+
+<!-- شريط المقارنة العائم (يظهر عند اختيار كورسات) -->
+<div id="compare-bar" class="hidden fixed bottom-0 left-0 right-0 bg-white shadow-2xl border-t-4 border-primary-500 z-40 transform transition-transform duration-300">
+    <div class="container mx-auto px-4 py-4">
+        <div class="flex items-center justify-between gap-4 flex-wrap">
+            <div class="flex items-center gap-3">
+                <div class="bg-primary-500 text-white p-2 rounded-lg">
+                    <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none">
+                        <path d="M12 4V1L8 5L12 9V6C15.31 6 18 8.69 18 12C18 13.01 17.75 13.97 17.3 14.8L18.76 16.26C19.5702 14.9869 20.0004 13.5091 20 12C20 7.58 16.42 4 12 4ZM12 18C8.69 18 6 15.31 6 12C6 10.99 6.25 10.03 6.7 9.2L5.24 7.74C4.42975 9.01309 3.99958 10.4909 4 12C4 16.42 7.58 20 12 20V23L16 19L12 15V18Z" fill="currentColor"/>
+                    </svg>
+                </div>
+                <div>
+                    <p class="font-bold text-gray-800">قائمة المقارنة</p>
+                    <p class="text-sm text-gray-500">اختار <span id="selected-count">0</span> من 2 كورس</p>
+                </div>
+            </div>
+
+            <!-- الكورسات المختارة -->
+            <div id="selected-courses-preview" class="flex items-center gap-3 flex-1 overflow-x-auto">
+                <!-- سيتم إضافة الكورسات هنا ديناميكياً -->
+            </div>
+
+            <div class="flex items-center gap-3">
+                <button onclick="clearComparison()" class="text-red-500 hover:text-red-700 font-semibold px-4 py-2 rounded-lg hover:bg-red-50 transition-colors">
+                    مسح الكل
+                </button>
+                <button id="show-comparison-btn" onclick="showComparison()" disabled class="btn btn-primary disabled:opacity-50 disabled:cursor-not-allowed">
+                    <span class="flex items-center gap-2">
+                        عرض المقارنة
+                        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none">
+                            <path d="M9 5L16 12L9 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal المقارنة - تصميم بسيط وأنيق -->
+<div id="compare-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-6xl w-full max-h-[90vh] overflow-hidden shadow-xl">
+        
+        <!-- Header -->
+        <div class="bg-primary-500 text-white p-2 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 4V1L8 5L12 9V6C15.31 6 18 8.69 18 12C18 13.01 17.75 13.97 17.3 14.8L18.76 16.26C19.5702 14.9869 20.0004 13.5091 20 12C20 7.58 16.42 4 12 4ZM12 18C8.69 18 6 15.31 6 12C6 10.99 6.25 10.03 6.7 9.2L5.24 7.74C4.42975 9.01309 3.99958 10.4909 4 12C4 16.42 7.58 20 12 20V23L16 19L12 15V18Z" fill="currentColor"/>
+                </svg>
+                <h2 class="text-2xl font-bold">مقارنة الكورسات</h2>
+            </div>
+            <button onclick="closeCompareModal()" class="hover:bg-white hover:bg-opacity-20 rounded-lg p-2">
+                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none">
+                    <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Content -->
+        <div class="overflow-y-auto max-h-[calc(90vh-140px)] bg-gray-50">
+            <div class="p-6">
+                <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+                    <table class="w-full">
+                        <thead>
+                            <tr class="bg-gray-100">
+                                <th class="p-4 text-gray-700 font-semibold w-1/3">المعيار</th>
+                                <th class="p-4 text-center border-x border-gray-200">
+                                    <div id="course-1-header"></div>
+                                </th>
+                                <th class="p-4 text-center">
+                                    <div id="course-2-header"></div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200">
+                            <!-- الصورة -->
+                            <tr>
+                                <td class="p-4 font-semibold text-gray-700 bg-gray-50">صورة الكورس</td>
+                                <td class="p-4 text-center border-x border-gray-200">
+                                    <div id="course-1-image"></div>
+                                </td>
+                                <td class="p-4 text-center">
+                                    <div id="course-2-image"></div>
+                                </td>
+                            </tr>
+                            
+                            <!-- السعر -->
+                            <tr>
+                                <td class="p-4 font-semibold text-gray-700 bg-gray-50">السعر</td>
+                                <td class="p-4 text-center border-x border-gray-200">
+                                    <div id="course-1-price"></div>
+                                </td>
+                                <td class="p-4 text-center">
+                                    <div id="course-2-price"></div>
+                                </td>
+                            </tr>
+                            
+                            <!-- عدد الطلاب -->
+                            <tr>
+                                <td class="p-4 font-semibold text-gray-700 bg-gray-50">عدد الطلاب</td>
+                                <td class="p-4 text-center border-x border-gray-200">
+                                    <div id="course-1-students"></div>
+                                </td>
+                                <td class="p-4 text-center">
+                                    <div id="course-2-students"></div>
+                                </td>
+                            </tr>
+                            
+                            <!-- عدد الدروس -->
+                            <tr>
+                                <td class="p-4 font-semibold text-gray-700 bg-gray-50">عدد الدروس</td>
+                                <td class="p-4 text-center border-x border-gray-200">
+                                    <div id="course-1-lessons"></div>
+                                </td>
+                                <td class="p-4 text-center">
+                                    <div id="course-2-lessons"></div>
+                                </td>
+                            </tr>
+                            
+                            <!-- آخر موعد للشراء -->
+                            <tr>
+                                <td class="p-4 font-semibold text-gray-700 bg-gray-50">آخر موعد للشراء</td>
+                                <td class="p-4 text-center border-x border-gray-200">
+                                    <div id="course-1-lastdate"></div>
+                                </td>
+                                <td class="p-4 text-center">
+                                    <div id="course-2-lastdate"></div>
+                                </td>
+                            </tr>
+                            
+                            <!-- مدة الوصول -->
+                            <tr>
+                                <td class="p-4 font-semibold text-gray-700 bg-gray-50">مدة الوصول</td>
+                                <td class="p-4 text-center border-x border-gray-200">
+                                    <div id="course-1-access"></div>
+                                </td>
+                                <td class="p-4 text-center">
+                                    <div id="course-2-access"></div>
+                                </td>
+                            </tr>
+                            
+                            <!-- نسبة الخصم -->
+                            <tr>
+                                <td class="p-4 font-semibold text-gray-700 bg-gray-50">نسبة الخصم</td>
+                                <td class="p-4 text-center border-x border-gray-200">
+                                    <div id="course-1-discount"></div>
+                                </td>
+                                <td class="p-4 text-center">
+                                    <div id="course-2-discount"></div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="bg-white border-t p-4 flex justify-between items-center">
+            <button onclick="clearComparison()" class="text-gray-600 hover:text-red-500 font-semibold px-4 py-2">
+                مسح المقارنة
+            </button>
+            <div class="flex gap-3">
+                <button onclick="closeCompareModal()" class="bg-primary-500 hover:bg-primary-600 text-white font-semibold px-6 py-2 rounded-lg">
+                    إغلاق
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+// متغيرات عامة
+let selectedCourses = [];
+const maxCourses = 2;
+
+// بيانات الكورسات
+const coursesData = {
+    'course-1': {
+        id: 'course-1',
+        title: 'Artificial Intelligence Basics',
+        image: 'images/courses1.png',
+        price: 1000,
+        oldPrice: 2500,
+        students: 10,
+        lessons: 5,
+        lastDate: '10 Jan 2026',
+        accessDays: 99,
+        discount: 60
+    },
+    'course-2': {
+        id: 'course-2',
+        title: 'Machine Learning Advanced',
+        image: 'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=400',
+        price: 50,
+        oldPrice: 150,
+        students: 25,
+        lessons: 12,
+        lastDate: '15 Feb 2026',
+        accessDays: 180,
+        discount: 67
+    },
+    'course-3': {
+        id: 'course-3',
+        title: 'Data Science Fundamentals',
+        image: 'images/courses1.png',
+        price: 1000,
+        oldPrice: 2500,
+        students: 15,
+        lessons: 8,
+        lastDate: '10 Jan 2026',
+        accessDays: 99,
+        discount: 60
+    },
+    'course-4': {
+        id: 'course-4',
+        title: 'Deep Learning Pro',
+        image: 'images/courses1.png',
+        price: 0,
+        oldPrice: 500,
+        students: 50,
+        lessons: 20,
+        lastDate: null,
+        accessDays: 99,
+        discount: 100
+    }
+};
+
+// إضافة/إزالة كورس من المقارنة
+function toggleCourse(courseId, button) {
+    const index = selectedCourses.indexOf(courseId);
+    
+    if (index > -1) {
+        selectedCourses.splice(index, 1);
+        button.classList.remove('bg-primary-500', 'text-white');
+        button.classList.add('bg-white', 'text-primary-800');
+        button.querySelector('svg').classList.remove('text-white');
+        button.querySelector('svg').classList.add('text-primary-800');
+    } else {
+        if (selectedCourses.length >= maxCourses) {
+            alert('يمكنك اختيار كورسين فقط للمقارنة!');
+            return;
+        }
+        selectedCourses.push(courseId);
+        button.classList.remove('bg-white', 'text-primary-800');
+        button.classList.add('bg-primary-500', 'text-white');
+        button.querySelector('svg').classList.remove('text-primary-800');
+        button.querySelector('svg').classList.add('text-white');
+    }
+    
+    updateCompareBar();
+}
+
+// تحديث شريط المقارنة
+function updateCompareBar() {
+    const compareBar = document.getElementById('compare-bar');
+    const selectedCount = document.getElementById('selected-count');
+    const selectedPreview = document.getElementById('selected-courses-preview');
+    const showBtn = document.getElementById('show-comparison-btn');
+    
+    selectedCount.textContent = selectedCourses.length;
+    
+    if (selectedCourses.length > 0) {
+        compareBar.classList.remove('hidden');
+        
+        selectedPreview.innerHTML = selectedCourses.map(courseId => {
+            const course = coursesData[courseId];
+            return `
+                <div class="bg-primary-50 border border-primary-200 rounded-lg p-3 flex items-center gap-3 min-w-[250px]">
+                    <img src="${course.image}" class="w-12 h-12 rounded object-cover">
+                    <div class="flex-1">
+                        <p class="font-semibold text-sm text-gray-800">${course.title}</p>
+                        <p class="text-primary-500 font-bold text-sm">$${course.price}</p>
+                    </div>
+                    <button onclick="removeCourseFromCompare('${courseId}')" class="text-red-500 hover:bg-red-50 p-1 rounded">
+                        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none">
+                            <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </button>
+                </div>
+            `;
+        }).join('');
+        
+        if (selectedCourses.length === 2) {
+            showBtn.disabled = false;
+        } else {
+            showBtn.disabled = true;
+        }
+    } else {
+        compareBar.classList.add('hidden');
+    }
+}
+
+// إزالة كورس من المقارنة
+function removeCourseFromCompare(courseId) {
+    const button = document.querySelector(`[onclick*="${courseId}"]`);
+    toggleCourse(courseId, button);
+}
+
+// مسح كل الكورسات
+function clearComparison() {
+    selectedCourses.forEach(courseId => {
+        const button = document.querySelector(`[onclick*="${courseId}"]`);
+        if (button) {
+            button.classList.remove('bg-primary-500', 'text-white');
+            button.classList.add('bg-white', 'text-primary-800');
+            button.querySelector('svg').classList.remove('text-white');
+            button.querySelector('svg').classList.add('text-primary-800');
+        }
+    });
+    selectedCourses = [];
+    updateCompareBar();
+    closeCompareModal();
+}
+
+// عرض المقارنة
+function showComparison() {
+    if (selectedCourses.length !== 2) {
+        alert('يجب اختيار كورسين للمقارنة!');
+        return;
+    }
+    
+    const course1Data = coursesData[selectedCourses[0]];
+    const course2Data = coursesData[selectedCourses[1]];
+    
+    // Header
+    document.getElementById('course-1-header').innerHTML = `
+        <p class="font-bold text-gray-800">${course1Data.title}</p>
+    `;
+    document.getElementById('course-2-header').innerHTML = `
+        <p class="font-bold text-gray-800">${course2Data.title}</p>
+    `;
+    
+    // الصور
+    document.getElementById('course-1-image').innerHTML = `
+        <img src="${course1Data.image}" class="w-32 h-24 object-cover rounded-lg mx-auto">
+    `;
+    document.getElementById('course-2-image').innerHTML = `
+        <img src="${course2Data.image}" class="w-32 h-24 object-cover rounded-lg mx-auto">
+    `;
+    
+    // السعر
+    document.getElementById('course-1-price').innerHTML = `
+        <div>
+            <p class="text-2xl font-bold text-primary-500">${course1Data.price === 0 ? 'مجاناً' : '$' + course1Data.price}</p>
+            ${course1Data.oldPrice ? `<p class="text-sm text-gray-400 line-through">$${course1Data.oldPrice}</p>` : ''}
+        </div>
+    `;
+    document.getElementById('course-2-price').innerHTML = `
+        <div>
+            <p class="text-2xl font-bold text-primary-500">${course2Data.price === 0 ? 'مجاناً' : '$' + course2Data.price}</p>
+            ${course2Data.oldPrice ? `<p class="text-sm text-gray-400 line-through">$${course2Data.oldPrice}</p>` : ''}
+        </div>
+    `;
+    
+    // عدد الطلاب
+    document.getElementById('course-1-students').innerHTML = `
+        <p class="text-lg font-semibold text-gray-800">${course1Data.students} طالب</p>
+    `;
+    document.getElementById('course-2-students').innerHTML = `
+        <p class="text-lg font-semibold text-gray-800">${course2Data.students} طالب</p>
+    `;
+    
+    // عدد الدروس
+    document.getElementById('course-1-lessons').innerHTML = `
+        <p class="text-lg font-semibold text-gray-800">${course1Data.lessons} درس</p>
+    `;
+    document.getElementById('course-2-lessons').innerHTML = `
+        <p class="text-lg font-semibold text-gray-800">${course2Data.lessons} درس</p>
+    `;
+    
+    // آخر موعد
+    document.getElementById('course-1-lastdate').innerHTML = `
+        <p class="text-gray-700">${course1Data.lastDate || 'غير محدد'}</p>
+    `;
+    document.getElementById('course-2-lastdate').innerHTML = `
+        <p class="text-gray-700">${course2Data.lastDate || 'غير محدد'}</p>
+    `;
+    
+    // مدة الوصول
+    document.getElementById('course-1-access').innerHTML = `
+        <p class="text-gray-700">${course1Data.accessDays} يوم</p>
+    `;
+    document.getElementById('course-2-access').innerHTML = `
+        <p class="text-gray-700">${course2Data.accessDays} يوم</p>
+    `;
+    
+    // الخصم
+    document.getElementById('course-1-discount').innerHTML = `
+        <span class="bg-green-100 text-green-700 px-4 py-2 rounded-full font-bold">${course1Data.discount}%</span>
+    `;
+    document.getElementById('course-2-discount').innerHTML = `
+        <span class="bg-green-100 text-green-700 px-4 py-2 rounded-full font-bold">${course2Data.discount}%</span>
+    `;
+    
+    document.getElementById('compare-modal').classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+}
+
+// إغلاق Modal
+function closeCompareModal() {
+    document.getElementById('compare-modal').classList.add('hidden');
+    document.body.style.overflow = 'auto';
+}
+
+// مشاركة المقارنة
+function shareComparison() {
+    const course1 = coursesData[selectedCourses[0]];
+    const course2 = coursesData[selectedCourses[1]];
+    const text = `مقارنة بين:\n${course1.title} ($${course1.price})\nو ${course2.title} ($${course2.price})`;
+    
+    if (navigator.share) {
+        navigator.share({
+            title: 'مقارنة الكورسات',
+            text: text
+        });
+    } else {
+        alert('المشاركة غير مدعومة في هذا المتصفح');
+    }
+}
+</script>
 
     <script src="js/flowbite.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
