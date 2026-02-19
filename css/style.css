@@ -1998,6 +1998,10 @@ body{
   margin-top: auto;
 }
 
+.mb-\[6px\]{
+  margin-bottom: 6px;
+}
+
 .box-border{
   box-sizing: border-box;
 }
@@ -2235,10 +2239,6 @@ body{
   height: 100vh;
 }
 
-.h-14{
-  height: 3.5rem;
-}
-
 .max-h-48{
   max-height: 12rem;
 }
@@ -2402,10 +2402,6 @@ body{
 
 .w-screen{
   width: 100vw;
-}
-
-.w-14{
-  width: 3.5rem;
 }
 
 .min-w-0{
@@ -3169,12 +3165,6 @@ body{
   --tw-space-y-reverse: 0;
   margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(2rem * var(--tw-space-y-reverse));
-}
-
-.space-y-6 > :not([hidden]) ~ :not([hidden]){
-  --tw-space-y-reverse: 0;
-  margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
 }
 
 .space-y-reverse > :not([hidden]) ~ :not([hidden]){
@@ -6120,6 +6110,11 @@ body {
   .lg\:px-8{
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+
+  .lg\:text-3xl{
+    font-size: 1.875rem;
+    line-height: 2.25rem;
   }
 }
 
