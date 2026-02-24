@@ -1855,6 +1855,10 @@ body{
   z-index: -1;
 }
 
+.z-\[0\]{
+  z-index: 0;
+}
+
 .z-\[1\]{
   z-index: 1;
 }
@@ -1865,14 +1869,6 @@ body{
 
 .z-\[5\]{
   z-index: 5;
-}
-
-.-z-10{
-  z-index: -10;
-}
-
-.z-\[0\]{
-  z-index: 0;
 }
 
 .order-1{
@@ -1990,6 +1986,10 @@ body{
 
 .mb-1{
   margin-bottom: 0.25rem;
+}
+
+.mb-10{
+  margin-bottom: 2.5rem;
 }
 
 .mb-12{
@@ -2122,10 +2122,6 @@ body{
 
 .mt-auto{
   margin-top: auto;
-}
-
-.mb-10{
-  margin-bottom: 2.5rem;
 }
 
 .box-border{
@@ -4154,6 +4150,11 @@ body{
   background-color: rgb(243 255 250 / var(--tw-bg-opacity));
 }
 
+.bg-\[\#F5F5F5\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(245 245 245 / var(--tw-bg-opacity));
+}
+
 .bg-\[\#FF3D00\]{
   --tw-bg-opacity: 1;
   background-color: rgb(255 61 0 / var(--tw-bg-opacity));
@@ -4327,6 +4328,10 @@ body{
   background-image: linear-gradient(89.94deg,#02C06F 3.53%,#008A50 99.94%);
 }
 
+.bg-gradient-to-r{
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+}
+
 .bg-gradient-to-t{
   background-image: linear-gradient(to top, var(--tw-gradient-stops));
 }
@@ -4335,10 +4340,20 @@ body{
   background-image: none;
 }
 
+.from-\[\#05C172\]{
+  --tw-gradient-from: #05C172 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(5 193 114 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
 .from-primary-800{
   --tw-gradient-from: #008A50 var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(0 138 80 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.to-\[\#56C2C9\]{
+  --tw-gradient-to: #56C2C9 var(--tw-gradient-to-position);
 }
 
 .to-primary-500{
@@ -4775,6 +4790,10 @@ body{
   padding-inline-start: 1rem;
 }
 
+.ps-5{
+  padding-inline-start: 1.25rem;
+}
+
 .ps-7{
   padding-inline-start: 1.75rem;
 }
@@ -4793,10 +4812,6 @@ body{
 
 .pt-5{
   padding-top: 1.25rem;
-}
-
-.ps-5{
-  padding-inline-start: 1.25rem;
 }
 
 .text-left{
@@ -4923,6 +4938,10 @@ body{
 
 .font-semibold{
   font-weight: 600;
+}
+
+.font-black{
+  font-weight: 900;
 }
 
 .uppercase{
@@ -6783,12 +6802,12 @@ body {
     margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
   }
 
-  .md\:p-6{
-    padding: 1.5rem;
-  }
-
   .md\:p-5{
     padding: 1.25rem;
+  }
+
+  .md\:p-6{
+    padding: 1.5rem;
   }
 
   .md\:px-8{

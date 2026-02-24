@@ -449,51 +449,680 @@
 
     <section>
       <div class="container">
-                <h2 class="text-2xl lg:text-3xl font-bold mb-3 leading-tight capitalize">Compare features</h2>
+        <h2 class="text-2xl lg:text-3xl font-bold mb-3 leading-tight capitalize">Compare features</h2>
 
-<div id="accordion-card" data-accordion="collapse">
-  <h2 id="accordion-card-heading-1">
-    <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-body rounded-base shadow-xs border border-default hover:text-heading hover:bg-neutral-secondary-medium gap-3 [&[aria-expanded='true']]:rounded-b-none [&[aria-expanded='true']]:shadow-none" data-accordion-target="#accordion-card-body-1" aria-expanded="true" aria-controls="accordion-card-body-1">
-      <span>What is Flowbite?</span>
-      <svg data-accordion-icon class="w-5 h-5 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m5 15 7-7 7 7"/></svg>
-    </button>
-  </h2>
-  <div id="accordion-card-body-1" class="hidden border border-t-0 border-default rounded-b-base shadow-xs" aria-labelledby="accordion-card-heading-1">
-    <div class="p-4 md:p-5">
-      <p class="mb-2 text-body">Flowbite is an open-source library of interactive components built on top of Tailwind CSS including buttons, dropdowns, modals, navbars, and more.</p>
-      <p class="text-body">Check out this guide to learn how to <a href="/docs/getting-started/introduction/" class="text-fg-brand hover:underline">get started</a> and start developing websites even faster with components on top of Tailwind CSS.</p>
-    </div>
-  </div>
-  <h2 id="accordion-card-heading-2" class="mt-4">
-    <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-body rounded-base shadow-xs border border-default hover:text-heading hover:bg-neutral-secondary-medium gap-3 [&[aria-expanded='true']]:rounded-b-none [&[aria-expanded='true']]:shadow-none" data-accordion-target="#accordion-card-body-2" aria-expanded="false" aria-controls="accordion-card-body-2">
-      <span>Is there a Figma file available?</span>
-      <svg data-accordion-icon class="w-5 h-5 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m5 15 7-7 7 7"/></svg>
-    </button>
-  </h2>
-  <div id="accordion-card-body-2" class="hidden border border-t-0 border-default rounded-b-base shadow-xs" aria-labelledby="accordion-card-heading-2">
-    <div class="p-4 md:p-5">
-      <p class="mb-2 text-body">Flowbite is first conceptualized and designed using the Figma software so everything you see in the library has a design equivalent in our Figma file.</p>
-      <p class="text-body">Check out the <a href="https://flowbite.com/figma/" class="text-fg-brand hover:underline">Figma design system</a> based on the utility classes from Tailwind CSS and components from Flowbite.</p>
-    </div>
-  </div>
-  <h2 id="accordion-card-heading-3" class="mt-4">
-    <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-body rounded-base shadow-xs border border-default hover:text-heading hover:bg-neutral-secondary-medium gap-3 [&[aria-expanded='true']]:rounded-b-none [&[aria-expanded='true']]:shadow-none" data-accordion-target="#accordion-card-body-3" aria-expanded="false" aria-controls="accordion-card-body-3">
-      <span>What are the differences between Flowbite and Tailwind UI?</span>
-      <svg data-accordion-icon class="w-5 h-5 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m5 15 7-7 7 7"/></svg>
-    </button>
-  </h2>
-  <div id="accordion-card-body-3" class="hidden border border-t-0 border-default rounded-b-base shadow-xs" aria-labelledby="accordion-card-heading-3">
-    <div class="p-4 md:p-5">
-      <p class="mb-2 text-body">The main difference is that the core components from Flowbite are open source under the MIT license, whereas Tailwind UI is a paid product. Another difference is that Flowbite relies on smaller and standalone components, whereas Tailwind UI offers sections of pages.</p>
-      <p class="mb-2 text-body">However, we actually recommend using both Flowbite, Flowbite Pro, and even Tailwind UI as there is no technical reason stopping you from using the best of two worlds.</p>
-      <p class="mb-2 text-body">Learn more about these technologies:</p>
-      <ul class="ps-5 text-body list-disc">
-        <li><a href="https://flowbite.com/pro/" class="text-fg-brand hover:underline">Flowbite Pro</a></li>
-        <li><a href="https://tailwindui.com/" rel="nofollow" class="text-fg-brand hover:underline">Tailwind UI</a></li>
-      </ul>
-    </div>
-  </div>
-</div>
+        <div id="accordion-card" data-accordion="collapse">
+          <h2 id="accordion-card-heading-1" class="mt-4">
+            <button type="button"
+              class="flex items-center justify-between w-full p-4 text-white font-semibold rounded-lg bg-gradient-to-r from-[#05C172] to-[#56C2C9]"
+              data-accordion-target="#accordion-card-body-1" aria-expanded="true" aria-controls="accordion-card-body-1">
+              <div class="grid grid-cols-4 items-center w-full">
+                <div class="col-span-2 text-start">
+                  World-Class Content
+                </div>
+                <div class="flex justify-center">
+                  Team
+                </div>
+                <div class="flex justify-center">
+                  Enterprise
+                </div>
+              </div>
+              <svg data-accordion-icon class="w-5 h-5 rotate-180 shrink-0" aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="m5 15 7-7 7 7" />
+              </svg>
+            </button>
+          </h2>
+          <div id="accordion-card-body-1" class="hidden mt-2 mb-5 space-y-2" aria-labelledby="accordion-card-heading-1">
+            <div class="grid grid-cols-4 items-center bg-[#F5F5F5] rounded-lg px-6 py-4">
+              <div class="text-sm col-span-2">
+                Catalog Of 9,200+ Courses From Top Universities And Companies
+              </div>
+              <div class="flex justify-center">
+                <svg width="24" height="24" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="24" height="24" rx="13" fill="#2EB97E" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M7.16675 13L8.62508 11.5417L11.5417 14.4583L17.3751 8.625L18.8334 10.0833L11.5417 17.375L7.16675 13Z"
+                    fill="white" stroke="white" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <div class="flex justify-center">
+                <svg width="24" height="24" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="24" height="24" rx="13" fill="#2EB97E" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M7.16675 13L8.62508 11.5417L11.5417 14.4583L17.3751 8.625L18.8334 10.0833L11.5417 17.375L7.16675 13Z"
+                    fill="white" stroke="white" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+            </div>
+            <div class="grid grid-cols-4 items-center bg-[#F5F5F5] rounded-lg px-6 py-4">
+              <div class="text-sm col-span-2">
+                Verified Certificates upon course completion
+              </div>
+              <div class="flex justify-center">
+                <svg width="24" height="24" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="24" height="24" rx="13" fill="#2EB97E" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M7.16675 13L8.62508 11.5417L11.5417 14.4583L17.3751 8.625L18.8334 10.0833L11.5417 17.375L7.16675 13Z"
+                    fill="white" stroke="white" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <div class="flex justify-center">
+                <svg width="24" height="24" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="24" height="24" rx="13" fill="#2EB97E" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M7.16675 13L8.62508 11.5417L11.5417 14.4583L17.3751 8.625L18.8334 10.0833L11.5417 17.375L7.16675 13Z"
+                    fill="white" stroke="white" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+            </div>
+            <div class="grid grid-cols-4 items-center bg-[#F5F5F5] rounded-lg px-6 py-4">
+              <div class="text-sm col-span-2">
+                Catalog of 1,500+ hands-on Guided Projects, incl. secure GenAI Playgrounds
+              </div>
+              <div class="flex justify-center">
+                <svg width="24" height="24" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="24" height="24" rx="13" fill="#2EB97E" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M7.16675 13L8.62508 11.5417L11.5417 14.4583L17.3751 8.625L18.8334 10.0833L11.5417 17.375L7.16675 13Z"
+                    fill="white" stroke="white" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <div class="flex justify-center">
+                <svg width="24" height="24" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="24" height="24" rx="13" fill="#2EB97E" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M7.16675 13L8.62508 11.5417L11.5417 14.4583L17.3751 8.625L18.8334 10.0833L11.5417 17.375L7.16675 13Z"
+                    fill="white" stroke="white" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+            </div>
+            <div class="grid grid-cols-4 items-center bg-[#F5F5F5] rounded-lg px-6 py-4">
+              <div class="text-sm col-span-2">
+                Full learner experience translated into 20+ non-English languages
+              </div>
+              <div class="flex justify-center">
+                <svg width="24" height="24" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="24" height="24" rx="13" fill="#2EB97E" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M7.16675 13L8.62508 11.5417L11.5417 14.4583L17.3751 8.625L18.8334 10.0833L11.5417 17.375L7.16675 13Z"
+                    fill="white" stroke="white" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <div class="flex justify-center">
+                <svg width="24" height="24" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="24" height="24" rx="13" fill="#2EB97E" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M7.16675 13L8.62508 11.5417L11.5417 14.4583L17.3751 8.625L18.8334 10.0833L11.5417 17.375L7.16675 13Z"
+                    fill="white" stroke="white" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+            </div>
+            <div class="grid grid-cols-4 items-center bg-[#F5F5F5] rounded-lg px-6 py-4">
+              <div class="text-sm col-span-2">
+                Access to 200,000 clips: bite-sized videos and lessons
+              </div>
+              <div class="flex justify-center">
+                <svg width="24" height="24" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="24" height="24" rx="13" fill="#2EB97E" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M7.16675 13L8.62508 11.5417L11.5417 14.4583L17.3751 8.625L18.8334 10.0833L11.5417 17.375L7.16675 13Z"
+                    fill="white" stroke="white" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <div class="flex justify-center">
+                <svg width="24" height="24" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="24" height="24" rx="13" fill="#2EB97E" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M7.16675 13L8.62508 11.5417L11.5417 14.4583L17.3751 8.625L18.8334 10.0833L11.5417 17.375L7.16675 13Z"
+                    fill="white" stroke="white" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+            </div>
+            <div class="grid grid-cols-4 items-center bg-[#F5F5F5] rounded-lg px-6 py-4">
+              <div class="text-sm col-span-2">
+                150+ Globally recognized certificates
+              </div>
+              <div class="flex justify-center">
+                <svg width="24" height="24" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="24" height="24" rx="13" fill="#2EB97E" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M7.16675 13L8.62508 11.5417L11.5417 14.4583L17.3751 8.625L18.8334 10.0833L11.5417 17.375L7.16675 13Z"
+                    fill="white" stroke="white" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <div class="flex justify-center">
+                <svg width="24" height="24" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="24" height="24" rx="13" fill="#2EB97E" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M7.16675 13L8.62508 11.5417L11.5417 14.4583L17.3751 8.625L18.8334 10.0833L11.5417 17.375L7.16675 13Z"
+                    fill="white" stroke="white" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <h2 id="accordion-card-heading-2" class="mt-4">
+            <button type="button"
+              class="flex items-center justify-between w-full p-4 text-white font-semibold rounded-lg bg-gradient-to-r from-[#05C172] to-[#56C2C9]"
+              data-accordion-target="#accordion-card-body-2" aria-expanded="true" aria-controls="accordion-card-body-2">
+              <div class="grid grid-cols-4 items-center w-full">
+                <div class="col-span-2 text-start">
+                  Learner Experience
+                </div>
+                <div class="flex justify-center">
+                  Team
+                </div>
+                <div class="flex justify-center">
+                  Enterprise
+                </div>
+              </div>
+              <svg data-accordion-icon class="w-5 h-5 rotate-180 shrink-0" aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="m5 15 7-7 7 7" />
+              </svg>
+            </button>
+          </h2>
+          <div id="accordion-card-body-2" class="hidden mt-2 mb-5 space-y-2" aria-labelledby="accordion-card-heading-2">
+            <div class="grid grid-cols-4 items-center bg-[#F5F5F5] rounded-lg px-6 py-4">
+              <div class="text-sm col-span-2">
+                AI-powered Coach anchored in expert content on drosly
+              </div>
+              <div class="flex justify-center">
+                <svg width="24" height="24" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="24" height="24" rx="13" fill="#2EB97E" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M7.16675 13L8.62508 11.5417L11.5417 14.4583L17.3751 8.625L18.8334 10.0833L11.5417 17.375L7.16675 13Z"
+                    fill="white" stroke="white" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <div class="flex justify-center">
+                <svg width="24" height="24" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="24" height="24" rx="13" fill="#2EB97E" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M7.16675 13L8.62508 11.5417L11.5417 14.4583L17.3751 8.625L18.8334 10.0833L11.5417 17.375L7.16675 13Z"
+                    fill="white" stroke="white" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+            </div>
+            <div class="grid grid-cols-4 items-center bg-[#F5F5F5] rounded-lg px-6 py-4">
+              <div class="text-sm col-span-2">
+                Trusted skill assessments baked into every course, verified by industry-leaders
+              </div>
+              <div class="flex justify-center">
+                <svg width="24" height="24" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="24" height="24" rx="13" fill="#2EB97E" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M7.16675 13L8.62508 11.5417L11.5417 14.4583L17.3751 8.625L18.8334 10.0833L11.5417 17.375L7.16675 13Z"
+                    fill="white" stroke="white" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <div class="flex justify-center">
+                <svg width="24" height="24" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="24" height="24" rx="13" fill="#2EB97E" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M7.16675 13L8.62508 11.5417L11.5417 14.4583L17.3751 8.625L18.8334 10.0833L11.5417 17.375L7.16675 13Z"
+                    fill="white" stroke="white" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+            </div>
+            <div class="grid grid-cols-4 items-center bg-[#F5F5F5] rounded-lg px-6 py-4">
+              <div class="text-sm col-span-2">
+                Mobile apps (iOS & Android)
+              </div>
+              <div class="flex justify-center">
+                <svg width="24" height="24" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="24" height="24" rx="13" fill="#2EB97E" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M7.16675 13L8.62508 11.5417L11.5417 14.4583L17.3751 8.625L18.8334 10.0833L11.5417 17.375L7.16675 13Z"
+                    fill="white" stroke="white" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <div class="flex justify-center">
+                <svg width="24" height="24" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="24" height="24" rx="13" fill="#2EB97E" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M7.16675 13L8.62508 11.5417L11.5417 14.4583L17.3751 8.625L18.8334 10.0833L11.5417 17.375L7.16675 13Z"
+                    fill="white" stroke="white" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+            </div>
+            <div class="grid grid-cols-4 items-center bg-[#F5F5F5] rounded-lg px-6 py-4">
+              <div class="text-sm col-span-2">
+                Priority technical support for learners
+              </div>
+              <div class="flex justify-center">
+                <svg width="24" height="24" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="24" height="24" rx="13" fill="#2EB97E" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M7.16675 13L8.62508 11.5417L11.5417 14.4583L17.3751 8.625L18.8334 10.0833L11.5417 17.375L7.16675 13Z"
+                    fill="white" stroke="white" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <div class="flex justify-center">
+                <svg width="24" height="24" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="24" height="24" rx="13" fill="#2EB97E" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M7.16675 13L8.62508 11.5417L11.5417 14.4583L17.3751 8.625L18.8334 10.0833L11.5417 17.375L7.16675 13Z"
+                    fill="white" stroke="white" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+            </div>
+            <div class="grid grid-cols-4 items-center bg-[#F5F5F5] rounded-lg px-6 py-4">
+              <div class="text-sm col-span-2">
+                Company-branded homepage and learner communications
+              </div>
+              <div class="flex justify-center">
+                <svg width="24" height="24" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="24" height="24" rx="13" fill="#2EB97E" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M7.16675 13L8.62508 11.5417L11.5417 14.4583L17.3751 8.625L18.8334 10.0833L11.5417 17.375L7.16675 13Z"
+                    fill="white" stroke="white" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <div class="flex justify-center">
+                <svg width="24" height="24" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="24" height="24" rx="13" fill="#2EB97E" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M7.16675 13L8.62508 11.5417L11.5417 14.4583L17.3751 8.625L18.8334 10.0833L11.5417 17.375L7.16675 13Z"
+                    fill="white" stroke="white" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <h2 id="accordion-card-heading-3" class="mt-4">
+            <button type="button"
+              class="flex items-center justify-between w-full p-4 text-white font-semibold rounded-lg bg-gradient-to-r from-[#05C172] to-[#56C2C9]"
+              data-accordion-target="#accordion-card-body-3" aria-expanded="true" aria-controls="accordion-card-body-3">
+              <div class="grid grid-cols-4 items-center w-full">
+                <div class="col-span-2 text-start">
+                  Skill platform
+                </div>
+                <div class="flex justify-center">
+                  Team
+                </div>
+                <div class="flex justify-center">
+                  Enterprise
+                </div>
+              </div>
+              <svg data-accordion-icon class="w-5 h-5 rotate-180 shrink-0" aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="m5 15 7-7 7 7" />
+              </svg>
+            </button>
+          </h2>
+          <div id="accordion-card-body-3" class="hidden mt-2 mb-5 space-y-2" aria-labelledby="accordion-card-heading-3">
+            <div class="grid grid-cols-4 items-center bg-[#F5F5F5] rounded-lg px-6 py-4">
+              <div class="text-sm col-span-2">
+                Industry skill insights and benchmarking
+              </div>
+              <div class="flex justify-center">
+                <svg width="24" height="24" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="24" height="24" rx="13" fill="#2EB97E" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M7.16675 13L8.62508 11.5417L11.5417 14.4583L17.3751 8.625L18.8334 10.0833L11.5417 17.375L7.16675 13Z"
+                    fill="white" stroke="white" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <div class="flex justify-center">
+                <svg width="24" height="24" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="24" height="24" rx="13" fill="#2EB97E" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M7.16675 13L8.62508 11.5417L11.5417 14.4583L17.3751 8.625L18.8334 10.0833L11.5417 17.375L7.16675 13Z"
+                    fill="white" stroke="white" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+            </div>
+            <div class="grid grid-cols-4 items-center bg-[#F5F5F5] rounded-lg px-6 py-4">
+              <div class="text-sm col-span-2">
+                Analytics for skills learned, proficiency, and time to mastery
+              </div>
+              <div class="flex justify-center">
+                <svg width="24" height="24" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="24" height="24" rx="13" fill="#2EB97E" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M7.16675 13L8.62508 11.5417L11.5417 14.4583L17.3751 8.625L18.8334 10.0833L11.5417 17.375L7.16675 13Z"
+                    fill="white" stroke="white" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <div class="flex justify-center">
+                <svg width="24" height="24" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="24" height="24" rx="13" fill="#2EB97E" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M7.16675 13L8.62508 11.5417L11.5417 14.4583L17.3751 8.625L18.8334 10.0833L11.5417 17.375L7.16675 13Z"
+                    fill="white" stroke="white" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+            </div>
+            <div class="grid grid-cols-4 items-center bg-[#F5F5F5] rounded-lg px-6 py-4">
+              <div class="text-sm col-span-2">
+                Custom learning paths with badging
+              </div>
+              <div class="flex justify-center">
+                <svg width="24" height="24" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="24" height="24" rx="13" fill="#2EB97E" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M7.16675 13L8.62508 11.5417L11.5417 14.4583L17.3751 8.625L18.8334 10.0833L11.5417 17.375L7.16675 13Z"
+                    fill="white" stroke="white" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <div class="flex justify-center">
+                <svg width="24" height="24" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="24" height="24" rx="13" fill="#2EB97E" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M7.16675 13L8.62508 11.5417L11.5417 14.4583L17.3751 8.625L18.8334 10.0833L11.5417 17.375L7.16675 13Z"
+                    fill="white" stroke="white" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+            </div>
+            <div class="grid grid-cols-4 items-center bg-[#F5F5F5] rounded-lg px-6 py-4">
+              <div class="text-sm col-span-2">
+                AI-powered Course Builder for accelerated content creation, curation and customization
+              </div>
+              <div class="flex justify-center">
+                <p class="font-black text-primary-500">_</p>
+              </div>
+              <div class="flex justify-center">
+                <svg width="24" height="24" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="24" height="24" rx="13" fill="#2EB97E" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M7.16675 13L8.62508 11.5417L11.5417 14.4583L17.3751 8.625L18.8334 10.0833L11.5417 17.375L7.16675 13Z"
+                    fill="white" stroke="white" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <h2 id="accordion-card-heading-4" class="mt-4">
+            <button type="button"
+              class="flex items-center justify-between w-full p-4 text-white font-semibold rounded-lg bg-gradient-to-r from-[#05C172] to-[#56C2C9]"
+              data-accordion-target="#accordion-card-body-4" aria-expanded="true" aria-controls="accordion-card-body-4">
+              <div class="grid grid-cols-4 items-center w-full">
+                <div class="col-span-2 text-start">
+                  Skill Tracks
+                </div>
+                <div class="flex justify-center">
+                  Team
+                </div>
+                <div class="flex justify-center">
+                  Enterprise
+                </div>
+              </div>
+              <svg data-accordion-icon class="w-5 h-5 rotate-180 shrink-0" aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="m5 15 7-7 7 7" />
+              </svg>
+            </button>
+          </h2>
+          <div id="accordion-card-body-4" class="hidden mt-2 mb-5 space-y-2" aria-labelledby="accordion-card-heading-4">
+            <div class="grid grid-cols-4 items-center bg-[#F5F5F5] rounded-lg px-6 py-4">
+              <div class="text-sm col-span-2">
+                Dynamic, turnkey solutions across Software & Product, IT, Data teams and GenAI
+              </div>
+              <div class="flex justify-center">
+                <p class="font-black text-primary-500">_</p>
+              </div>
+              <div class="flex justify-center">
+                <svg width="24" height="24" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="24" height="24" rx="13" fill="#2EB97E" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M7.16675 13L8.62508 11.5417L11.5417 14.4583L17.3751 8.625L18.8334 10.0833L11.5417 17.375L7.16675 13Z"
+                    fill="white" stroke="white" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+            </div>
+            <div class="grid grid-cols-4 items-center bg-[#F5F5F5] rounded-lg px-6 py-4">
+              <div class="text-sm col-span-2">
+                Data-backed learning with structured pathways to skill mastery
+              </div>
+              <div class="flex justify-center">
+                <p class="font-black text-primary-500">_</p>
+              </div>
+              <div class="flex justify-center">
+                <svg width="24" height="24" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="24" height="24" rx="13" fill="#2EB97E" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M7.16675 13L8.62508 11.5417L11.5417 14.4583L17.3751 8.625L18.8334 10.0833L11.5417 17.375L7.16675 13Z"
+                    fill="white" stroke="white" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+            </div>
+            <div class="grid grid-cols-4 items-center bg-[#F5F5F5] rounded-lg px-6 py-4">
+              <div class="text-sm col-span-2">
+                Realize business outcomes with verified skills and in-course assessments
+              </div>
+              <div class="flex justify-center">
+                <p class="font-black text-primary-500">_</p>
+              </div>
+              <div class="flex justify-center">
+                <svg width="24" height="24" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="24" height="24" rx="13" fill="#2EB97E" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M7.16675 13L8.62508 11.5417L11.5417 14.4583L17.3751 8.625L18.8334 10.0833L11.5417 17.375L7.16675 13Z"
+                    fill="white" stroke="white" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <h2 id="accordion-card-heading-5" class="mt-4">
+            <button type="button"
+              class="flex items-center justify-between w-full p-4 text-white font-semibold rounded-lg bg-gradient-to-r from-[#05C172] to-[#56C2C9]"
+              data-accordion-target="#accordion-card-body-5" aria-expanded="true" aria-controls="accordion-card-body-5">
+              <div class="grid grid-cols-4 items-center w-full">
+                <div class="col-span-2 text-start">
+                  Customer Success
+                </div>
+                <div class="flex justify-center">
+                  Team
+                </div>
+                <div class="flex justify-center">
+                  Enterprise
+                </div>
+              </div>
+              <svg data-accordion-icon class="w-5 h-5 rotate-180 shrink-0" aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="m5 15 7-7 7 7" />
+              </svg>
+            </button>
+          </h2>
+          <div id="accordion-card-body-5" class="hidden mt-2 mb-5 space-y-2" aria-labelledby="accordion-card-heading-5">
+            <div class="grid grid-cols-4 items-center bg-[#F5F5F5] rounded-lg px-6 py-4">
+              <div class="text-sm col-span-2">
+                Access to a dedicated customer success manager
+              </div>
+              <div class="flex justify-center">
+                <p class="font-black text-primary-500">_</p>
+              </div>
+              <div class="flex justify-center">
+                <svg width="24" height="24" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="24" height="24" rx="13" fill="#2EB97E" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M7.16675 13L8.62508 11.5417L11.5417 14.4583L17.3751 8.625L18.8334 10.0833L11.5417 17.375L7.16675 13Z"
+                    fill="white" stroke="white" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+            </div>
+            <div class="grid grid-cols-4 items-center bg-[#F5F5F5] rounded-lg px-6 py-4">
+              <div class="text-sm col-span-2">
+                Executive business reviews
+              </div>
+              <div class="flex justify-center">
+                <p class="font-black text-primary-500">_</p>
+              </div>
+              <div class="flex justify-center">
+                <svg width="24" height="24" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="24" height="24" rx="13" fill="#2EB97E" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M7.16675 13L8.62508 11.5417L11.5417 14.4583L17.3751 8.625L18.8334 10.0833L11.5417 17.375L7.16675 13Z"
+                    fill="white" stroke="white" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+            </div>
+            <div class="grid grid-cols-4 items-center bg-[#F5F5F5] rounded-lg px-6 py-4">
+              <div class="text-sm col-span-2">
+                Learner and admin onboarding 
+              </div>
+              <div class="flex justify-center">
+                <p class="font-black text-primary-500">_</p>
+              </div>
+              <div class="flex justify-center">
+                <svg width="24" height="24" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="24" height="24" rx="13" fill="#2EB97E" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M7.16675 13L8.62508 11.5417L11.5417 14.4583L17.3751 8.625L18.8334 10.0833L11.5417 17.375L7.16675 13Z"
+                    fill="white" stroke="white" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+            </div>
+          </div>
+
+
+          <h2 id="accordion-card-heading-6" class="mt-4">
+            <button type="button"
+              class="flex items-center justify-between w-full p-4 text-white font-semibold rounded-lg bg-gradient-to-r from-[#05C172] to-[#56C2C9]"
+              data-accordion-target="#accordion-card-body-6" aria-expanded="true" aria-controls="accordion-card-body-6">
+              <div class="grid grid-cols-4 items-center w-full">
+                <div class="col-span-2 text-start">
+                  Integrations 
+                </div>
+                <div class="flex justify-center">
+                  Team
+                </div>
+                <div class="flex justify-center">
+                  Enterprise
+                </div>
+              </div>
+              <svg data-accordion-icon class="w-5 h-5 rotate-180 shrink-0" aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="m5 15 7-7 7 7" />
+              </svg>
+            </button>
+          </h2>
+          <div id="accordion-card-body-6" class="hidden mt-2 mb-5 space-y-2" aria-labelledby="accordion-card-heading-6">
+            <div class="grid grid-cols-4 items-center bg-[#F5F5F5] rounded-lg px-6 py-4">
+              <div class="text-sm col-span-2">
+                Single sign-on (SSO) 
+              </div>
+              <div class="flex justify-center">
+                <p class="font-black text-primary-500">_</p>
+              </div>
+              <div class="flex justify-center">
+                <svg width="24" height="24" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="24" height="24" rx="13" fill="#2EB97E" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M7.16675 13L8.62508 11.5417L11.5417 14.4583L17.3751 8.625L18.8334 10.0833L11.5417 17.375L7.16675 13Z"
+                    fill="white" stroke="white" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+            </div>
+            <div class="grid grid-cols-4 items-center bg-[#F5F5F5] rounded-lg px-6 py-4">
+              <div class="text-sm col-span-2">
+                API integrations
+              </div>
+              <div class="flex justify-center">
+                <p class="font-black text-primary-500">_</p>
+              </div>
+              <div class="flex justify-center">
+                <svg width="24" height="24" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="24" height="24" rx="13" fill="#2EB97E" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M7.16675 13L8.62508 11.5417L11.5417 14.4583L17.3751 8.625L18.8334 10.0833L11.5417 17.375L7.16675 13Z"
+                    fill="white" stroke="white" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+            </div>
+            <div class="grid grid-cols-4 items-center bg-[#F5F5F5] rounded-lg px-6 py-4">
+              <div class="text-sm col-span-2">
+                LMS integrations (Degreed, Cornerstone, CrossKnowledge, SuccessFactors)
+              </div>
+              <div class="flex justify-center">
+                <p class="font-black text-primary-500">_</p>
+              </div>
+              <div class="flex justify-center">
+                <svg width="24" height="24" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="24" height="24" rx="13" fill="#2EB97E" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M7.16675 13L8.62508 11.5417L11.5417 14.4583L17.3751 8.625L18.8334 10.0833L11.5417 17.375L7.16675 13Z"
+                    fill="white" stroke="white" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <h2 id="accordion-card-heading-7" class="mt-4">
+            <button type="button"
+              class="flex items-center justify-between w-full p-4 text-white font-semibold rounded-lg bg-gradient-to-r from-[#05C172] to-[#56C2C9]"
+              data-accordion-target="#accordion-card-body-7" aria-expanded="true" aria-controls="accordion-card-body-7">
+              <div class="grid grid-cols-4 items-center w-full">
+                <div class="col-span-2 text-start">
+                  Billing
+                </div>
+                <div class="flex justify-center">
+                  Team
+                </div>
+                <div class="flex justify-center">
+                  Enterprise
+                </div>
+              </div>
+              <svg data-accordion-icon class="w-5 h-5 rotate-180 shrink-0" aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="m5 15 7-7 7 7" />
+              </svg>
+            </button>
+          </h2>
+          <div id="accordion-card-body-7" class="hidden mt-2 mb-5 space-y-2" aria-labelledby="accordion-card-heading-7">
+            <div class="grid grid-cols-4 items-center bg-[#F5F5F5] rounded-lg px-6 py-4">
+              <div class="text-sm col-span-2">
+                Billing by PayPal or credit card
+              </div>
+              <div class="flex justify-center">
+                <svg width="24" height="24" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="24" height="24" rx="13" fill="#2EB97E" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M7.16675 13L8.62508 11.5417L11.5417 14.4583L17.3751 8.625L18.8334 10.0833L11.5417 17.375L7.16675 13Z"
+                    fill="white" stroke="white" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <div class="flex justify-center">
+                <p class="font-black text-primary-500">_</p>
+              </div>
+            </div>
+            <div class="grid grid-cols-4 items-center bg-[#F5F5F5] rounded-lg px-6 py-4">
+              <div class="text-sm col-span-2">
+                Billing by invoice (ACH for US customers only invoicing 25 or more licenses)
+              </div>
+              <div class="flex justify-center">
+                <svg width="24" height="24" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="24" height="24" rx="13" fill="#2EB97E" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M7.16675 13L8.62508 11.5417L11.5417 14.4583L17.3751 8.625L18.8334 10.0833L11.5417 17.375L7.16675 13Z"
+                    fill="white" stroke="white" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <div class="flex justify-center">
+                <svg width="24" height="24" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="24" height="24" rx="13" fill="#2EB97E" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M7.16675 13L8.62508 11.5417L11.5417 14.4583L17.3751 8.625L18.8334 10.0833L11.5417 17.375L7.16675 13Z"
+                    fill="white" stroke="white" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+            </div>
+          </div>
+
+
+
+
+        </div>
 
       </div>
     </section>
