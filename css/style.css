@@ -2329,10 +2329,6 @@ body{
   height: 1.25rem;
 }
 
-.h-56{
-  height: 14rem;
-}
-
 .h-6{
   height: 1.5rem;
 }
@@ -2393,6 +2389,10 @@ body{
   height: 380px;
 }
 
+.h-\[395px\]{
+  height: 395px;
+}
+
 .h-\[calc\(100\%-1rem\)\]{
   height: calc(100% - 1rem);
 }
@@ -2411,6 +2411,10 @@ body{
 
 .h-screen{
   height: 100vh;
+}
+
+.h-\[348px\]{
+  height: 348px;
 }
 
 .max-h-48{
@@ -3439,6 +3443,12 @@ body{
   --tw-space-y-reverse: 0;
   margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(2rem * var(--tw-space-y-reverse));
+}
+
+.space-y-5 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1.25rem * var(--tw-space-y-reverse));
 }
 
 .space-y-reverse > :not([hidden]) ~ :not([hidden]){
@@ -6784,6 +6794,30 @@ body {
 
   .md\:h-96{
     height: 24rem;
+  }
+
+  .md\:h-\[25\.2rem\]{
+    height: 25.2rem;
+  }
+
+  .md\:h-\[27rem\]{
+    height: 27rem;
+  }
+
+  .md\:h-\[28rem\]{
+    height: 28rem;
+  }
+
+  .md\:h-\[30rem\]{
+    height: 30rem;
+  }
+
+  .md\:h-\[32rem\]{
+    height: 32rem;
+  }
+
+  .md\:h-\[35rem\]{
+    height: 35rem;
   }
 
   .md\:max-w-4xl{
