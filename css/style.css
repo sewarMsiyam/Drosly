@@ -2149,6 +2149,10 @@ body{
   margin-top: 1rem;
 }
 
+.mt-5{
+  margin-top: 1.25rem;
+}
+
 .mt-6{
   margin-top: 1.5rem;
 }
@@ -2167,10 +2171,6 @@ body{
 
 .mt-auto{
   margin-top: auto;
-}
-
-.mt-5{
-  margin-top: 1.25rem;
 }
 
 .box-border{
@@ -3864,6 +3864,10 @@ body{
   border-radius: 0px 50px;
 }
 
+.rounded-\[50px_0px\]{
+  border-radius: 50px 0px;
+}
+
 .rounded-\[70px_0px\]{
   border-radius: 70px 0px;
 }
@@ -3882,10 +3886,6 @@ body{
 
 .rounded-xl{
   border-radius: 1rem;
-}
-
-.rounded-\[50px_0px\]{
-  border-radius: 50px 0px;
 }
 
 .rounded-b{
@@ -5993,6 +5993,10 @@ body{
   vite: html;
 }
 
+.\[transform\:rotateZ\(100deg\)\]{
+  transform: rotateZ(100deg);
+}
+
 @plugin "flowbite/plugin";
 
 :root {
@@ -7225,6 +7229,10 @@ body {
     font-size: 1.875rem;
     line-height: 2.25rem;
   }
+
+  .md\:\[transform\:none\]{
+    transform: none;
+  }
 }
 
 @media (min-width: 1024px){
@@ -7419,6 +7427,10 @@ body {
 
   .lg\:text-\[34px\]{
     font-size: 34px;
+  }
+
+  .lg\:\[transform\:none\]{
+    transform: none;
   }
 }
 
